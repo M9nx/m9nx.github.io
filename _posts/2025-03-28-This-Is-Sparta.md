@@ -1,4 +1,10 @@
-### 
+---
+published: true
+title: This Is Sparta
+date: 2025-03-28 07:40:00 +0200
+categories: cyertalents
+tags: web-sec
+---
 
 Challenge Information
 
@@ -9,13 +15,13 @@ Challenge Information
 -   **Points:** 50
     
 
-### 
+
 
 **description**
 
 Morning has broken today they're fighting in the shade when arrows blocked the sun they fell tonight they dine in hell
 
-### 
+
 
 **Solution**
 
