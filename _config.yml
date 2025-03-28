@@ -98,7 +98,7 @@ theme_mode: dark
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://github.com/M9nx/m9nx.github.io/blob/main/assets/ce21a10551b08272b84ab54ae1b11044.jpg
+avatar: https://github.com/M9nx/m9nx.github.io/blob/main/assets/ce21a10551b08272b84ab54ae1b11044.jpg?raw=true
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -185,7 +185,7 @@ defaults:
   - scope:
       path: _drafts
     values:
-      comments: false
+      comments: true
   - scope:
       path: ""
       type: tabs # see `site.collections`
