@@ -48,10 +48,10 @@ focus on line 18, you see login credentials
 
 
 
-```
-user:support
-password:x34245323 
-```
+
+    user:support
+    password:x34245323 
+
 
 after login with this credentials
 
@@ -65,11 +65,9 @@ from support to admin and and click save and reload the page
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhugeNwGB7vsa8k7qXKq5%252Fimage.png%3Falt%3Dmedia%26token%3Dfe534435-00df-4285-8abb-9387c1b3e170&width=768&dpr=4&quality=100&sign=32ce95a2&sv=2)
 
-flag
-
 done 🎉
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FGH629P9vpmhHWkgmY2pp%252FMy%2520Work%2520Is%2520Done%2520Reaction%2520GIF%2520by%2520SpongeBob%2520SquarePants.gif%3Falt%3Dmedia%26token%3D926d381a-dc76-4ce1-8f71-abe761491bb9&width=768&dpr=4&quality=100&sign=6decead2&sv=2)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjg5ODk4ODddfQ==
+eyJoaXN0b3J5IjpbLTEyODU5NDA4NDFdfQ==
 -->
