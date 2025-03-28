@@ -1,6 +1,6 @@
 ---
 published: true
-title: This Is Sparta
+title: Admin has the power
 date: 2025-03-28 07:40:00 +0200
 categories: cybertalents
 tags: web-sec-easy
