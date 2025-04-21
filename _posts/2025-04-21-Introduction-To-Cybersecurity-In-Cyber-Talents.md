@@ -455,3 +455,45 @@ now send it
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fd1Vfhh0eSL1FztmYUwta%252Fimage.png%3Falt%3Dmedia%26token%3Dbbfaec4b-e340-4e63-a680-e88aad0b740d&width=768&dpr=4&quality=100&sign=10ebbccd&sv=2)
 
 ---
+
+# Hashable
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 100
+
+
+
+**description**
+
+A famous enterprise blog was hacked, can you figure out how it was hacked?
+
+
+**Solution**
+
+after access the lab we open it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FDdbBxlL2foDLwOy46GoE%252Fimage.png%3Falt%3Dmedia%26token%3D9da7cbea-7188-41b5-8021-b6db6134dc4e&width=768&dpr=4&quality=100&sign=92642a6a&sv=2)
+
+now search for find any input field to inject it , well i think contact it's contain input field
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Ffx7TOfB2ZLukKbP8PNdx%252Fimage.png%3Falt%3Dmedia%26token%3Dd89cc9cc-10fc-4cf3-9819-dd3efc33663e&width=768&dpr=4&quality=100&sign=570761cd&sv=2)
+
+we have 3 goood , now try to see if the page contain input filtration by type (@$<>|\'";:)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FS68LKRQGPMYOlKJ5xj3z%252Fimage.png%3Falt%3Dmedia%26token%3Ddd334f9b-d1a7-47f0-9a5d-ac70d21d1f13&width=768&dpr=4&quality=100&sign=c28a1497&sv=2)
+
+Well from error we see that the website execute the commands with the eval function, if you don't what is eval() function ? In some programming languages, `eval` , short for evaluate, is a function which evaluates a string as though it were an expression in the language, and returns a result; in others, it executes multiple lines of code as though they had been included instead of the line including the `eval:` ,okay i will try to type thank${system('ls')} this payload to list all files and directors
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhpDXTchX0RT10MpBq6yK%252Fimage.png%3Falt%3Dmedia%26token%3De41d0dcc-cd32-4ff9-ac3e-d1ce0e31196f&width=768&dpr=4&quality=100&sign=16e9dad3&sv=2)
+
+we got it , just type thank${system('cat flag_23894ABCX1.txt')} to show the file contet
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FxbVHkVKfmHd9vsxLJccj%252Fimage.png%3Falt%3Dmedia%26token%3D5205aa6e-6a88-4d47-bede-56783e210647&width=768&dpr=4&quality=100&sign=cb39d6b8&sv=2)
+
+---
