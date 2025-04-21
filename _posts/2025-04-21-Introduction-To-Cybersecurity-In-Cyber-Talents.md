@@ -123,3 +123,50 @@ and we know the password = sha-1(hash-result),so we do it in same site :
 
 ---
 
+# who am i?
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+Do not Start a fight you can not stop it
+
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fz6jDDOwQ3hccO5q6Qi6j%252Fimage.png%3Falt%3Dmedia%26token%3D1def694b-248d-487a-a2c4-a18ff76a05b6&width=768&dpr=4&quality=100&sign=f2ddefb7&sv=2)
+
+now we try to review source code (ctrl+u)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fz5wCyxGgqpaKbqLMLWUO%252Fimage.png%3Falt%3Dmedia%26token%3D3997e5e2-f77f-4ba8-b802-06cb6ef4f503&width=768&dpr=4&quality=100&sign=f0bd81d6&sv=2)
+
+focus on line 25,26 you see login credentials login with them
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FMqoYKYU7FQPJ3awz4LW8%252Fimage.png%3Falt%3Dmedia%26token%3D5bb485c2-c024-4f36-94f6-e1fbd22118d6&width=768&dpr=4&quality=100&sign=f1e51213&sv=2)
+
+now we try to edit cookie
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FBPLhuCmv2XtyEee8EX1O%252Fimage.png%3Falt%3Dmedia%26token%3D01cf48dc-2f06-4502-91c2-2543e2318e9a&width=768&dpr=4&quality=100&sign=14190f4d&sv=2)
+
+i will decode this value with Base64 (you can use this site ⇒ [https://www.base64decode.org/](https://www.base64decode.org/))
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FSDgVdTBKjzQCahgZuzhA%252Fimage.png%3Falt%3Dmedia%26token%3D44b70516-9444-49ce-96fd-33c9b6dbbb9a&width=768&dpr=4&quality=100&sign=e762dc71&sv=2)
+
+now change the value to login=admin and encode it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F0iLQAT19m8kYmr3o3Snr%252Fimage.png%3Falt%3Dmedia%26token%3D94e9596b-7124-4039-97c8-ba4024bdcd46&width=768&dpr=4&quality=100&sign=49461cfd&sv=2)
+
+now change the value of cookie to this value and reload site (don't forget save it 😄)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F0VAnyQxHhxiaLlekhrfL%252Fimage.png%3Falt%3Dmedia%26token%3Dde7a2412-f72c-47e3-9044-9478ded6cea3&width=768&dpr=4&quality=100&sign=7ac9cfb8&sv=2)
+
+---
