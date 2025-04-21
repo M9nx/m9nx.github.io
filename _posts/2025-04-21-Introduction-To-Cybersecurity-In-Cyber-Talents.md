@@ -664,3 +664,42 @@ now submit this analyze_packet_for_fun , and if you found this packet `<GET /f14
 
 ---
 
+# Cypher Anxiety
+
+
+Challenge Information
+
+- **Category:** Digital Forensics
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+An image was leaked from a babies store. the manager is so annoyed because he needs to identify the image to fire charges against the responsible employee. the key is the md5 of the image
+
+
+**Solution**
+
+after download the file unzip it and let’s see there is something hidden inside or not with strings tool
+
+command : `strings find\ the\ image.pcap | less`
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FEf2oLfy353PZdHoZVvM1%252Fimage.png%3Falt%3Dmedia%26token%3D87142bda-95f4-409a-931a-7ae8426ba191&width=768&dpr=4&quality=100&sign=4400bdbd&sv=2)
+
+well we have hint tell us that the password description key is P@sswordaya and the port is 7070, okay now let's to open file in Wireshark and put search filtration (tcp.port==7070)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F9n9bzch2aMwcoZ2XyrBb%252Fimage.png%3Falt%3Dmedia%26token%3D4e7b81e0-9e06-43b6-afe1-4c43616bded0&width=768&dpr=4&quality=100&sign=3c933ebb&sv=2)
+
+well , we'll follow this packet because his lenght , after open it and change show to raw he look this
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FG0MH7nG26UyGvLqWjAme%252Fimage.png%3Falt%3Dmedia%26token%3Dcac1bcb2-92f6-4f81-b34d-f8ac76b889c9&width=768&dpr=4&quality=100&sign=512f09b2&sv=2)
+
+now save it and go to your terminal for use netcat, okay open two tapes first type this command (nc localhost 7070 < cyber) and the second type this (cryptcat -l -k P@ssawordaya -p 7070 > cyber1) this credentials from strings output , after end use md5sum to show the flag
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FPC3QCgEpfS39bghCMC2L%252Fimage.png%3Falt%3Dmedia%26token%3D5cab5081-392a-4a3a-8108-2330e9784bf8&width=768&dpr=4&quality=100&sign=40affeaa&sv=2)
+
+---
+
