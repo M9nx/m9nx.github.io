@@ -595,3 +595,37 @@ this is website now upload above pic and click submit
 don't login with this just submit it 😄
 
 ---
+
+# I love music
+
+
+Challenge Information
+
+- **Category:** Digital Forensics
+    
+- **Level:** mideum
+    
+- **Points:** 50
+
+
+**description**
+
+listen and focus , you will listen another thin
+
+
+**Solution**
+
+after open the link we download it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FGqzm35Un4wWNQzl4gjii%252Fimage.png%3Falt%3Dmedia%26token%3Db04f9cd0-2fe5-4997-a53b-8617ab2cf8c2&width=768&dpr=4&quality=100&sign=54889b9b&sv=2)
+
+and now we know the flag is hidden in the audio waves i'll use this website [academo.org](https://academo.org/demos/spectrum-analyzer/)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FVtp6W2OkntwQSC3mDuKU%252Fimage.png%3Falt%3Dmedia%26token%3D1ba429b3-104f-4ce3-bb4a-635832209251&width=768&dpr=4&quality=100&sign=d81ee7e1&sv=2)
+
+and upload the audio file you already download it and see content of waves
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FOjzhDjiQN2l5dWNCA4QH%252Fimage.png%3Falt%3Dmedia%26token%3Da48d53d1-fd4d-4c28-9738-ab78f3886e6c&width=768&dpr=4&quality=100&sign=b19942cd&sv=2)
+
+---
+
