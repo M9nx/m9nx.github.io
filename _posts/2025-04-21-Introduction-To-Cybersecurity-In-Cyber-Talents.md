@@ -211,3 +211,53 @@ you can submit the flag or login in with this credentials it's up to you 😂
 
 ---
 
+# Searching for the cookie
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 100
+
+**description**
+
+simple search website we need to know which cookie to eat ;)
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fd0pxrQjHWVvyj63CpLtA%252Fimage.png%3Falt%3Dmedia%26token%3Ddd020948-1280-43e9-bbe4-71e23a03b49f&width=768&dpr=4&quality=100&sign=cdffd505&sv=2)
+
+first we input anything in search to see where stored in source code
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F0As29s5WkkZI6qo4jWKY%252Fimage.png%3Falt%3Dmedia%26token%3Dbbcf7f54-90af-407d-9149-89010d35ec7b&width=768&dpr=4&quality=100&sign=ba29daea&sv=2)
+
+ctrl + u to open source code badge and search for text you already input in my case i search for admin
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FjvxF2BB9sp6qZhZjlY6x%252Fimage.png%3Falt%3Dmedia%26token%3Dc42aebbf-a627-40d9-b0e8-7144d6c12a64&width=768&dpr=4&quality=100&sign=61451a58&sv=2)
+
+now we try to put payload to make alert : <script>alert(1)</script>
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FsMNwkKXFWIlqMfaR2T7I%252Fimage.png%3Falt%3Dmedia%26token%3D97724459-62fb-4dfd-8702-019f56a45ed6&width=768&dpr=4&quality=100&sign=9b5f72a8&sv=2)
+
+but it's doesn't work so let's go to see source code 😄
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F0hODsN9bEugLcF7FgK69%252Fimage.png%3Falt%3Dmedia%26token%3D49cb37a2-d265-4fae-a5c7-db5e324dabe1&width=768&dpr=4&quality=100&sign=a25f0043&sv=2)
+
+
+soo, i see it we can close the first script in first of payload like this : </script>......,and open new script tags with the payload finally : </script><script>alert(1)</script>
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FivoNkRTScJx9ocxnW1BW%252Fimage.png%3Falt%3Dmedia%26token%3D5c21bd98-b48b-46a8-80f8-478afb8bd8bd&width=768&dpr=4&quality=100&sign=905c51a8&sv=2)
+
+it's a good news, so let's go to get cookie 😄
+
+we remove 1 and put document.cookie final payload ⇒
+
+</script><script>alert(document.cookie)</script>
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FK6aavPC0R765rWH2Gdqz%252Fimage.png%3Falt%3Dmedia%26token%3Ddefc4933-ccf8-4816-9abf-c33f180bb54f&width=768&dpr=4&quality=100&sign=1be86730&sv=2)
+
+---
