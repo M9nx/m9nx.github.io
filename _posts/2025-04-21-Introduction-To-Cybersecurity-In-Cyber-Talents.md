@@ -548,3 +548,50 @@ now login
 well, it's easy one, in common case it's doesn't like this (i mean easy) .
 
 ---
+
+# Keep it Simple
+
+
+Challenge Information
+
+- **Category:** Digital Forensics
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+The answer is simple
+
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F38rkknrFCxMR1TvreOMa%252Fimage.png%3Falt%3Dmedia%26token%3D8e836b1e-3b04-400e-afa5-30617f055929&width=768&dpr=4&quality=100&sign=75d1d28e&sv=2)
+
+okay let's go to see what is the hint
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F8bjEqtowXvCuyYGe7MgX%252FScreenshot%25202025-02-14%2520033307.png%3Falt%3Dmedia%26token%3D8548c539-54af-417b-ba5b-407ab2212c1f&width=768&dpr=4&quality=100&sign=7f8b5f84&sv=2)
+
+well, i don't completely understand so i 'll gonna review source code
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F29Rp6TW9evuY3NtDprdq%252FScreenshot%25202025-02-14%2520033156.png%3Falt%3Dmedia%26token%3D98815071-096a-4e1f-9840-a6c6db23fcb3&width=768&dpr=4&quality=100&sign=21d4b3a6&sv=2)
+
+well, look at this pic it's doesn't appear in front end
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FN5GjqITneWtm039CUYt8%252Fimage.png%3Falt%3Dmedia%26token%3Ddbe942b2-abd1-4843-bbb6-0f31a3c859d9&width=768&dpr=4&quality=100&sign=5cfe4573&sv=2)
+
+okay the flag or pass must be hidden in this pic i will this [website](https://aperisolve.fr/) (you can use exiftool on your terminal)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FHe33a7n9nhxrUuCeztiW%252Fimage.png%3Falt%3Dmedia%26token%3D59a7399e-dc64-4daf-9c54-794178549ad3&width=768&dpr=4&quality=100&sign=61bfabb3&sv=2)
+
+this is website now upload above pic and click submit
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FP37cM48zOxEUdJRCmNcA%252Fimage.png%3Falt%3Dmedia%26token%3D7cc2336f-5318-4d41-a891-178bfd46c8f2&width=768&dpr=4&quality=100&sign=22db9598&sv=2)
+
+don't login with this just submit it 😄
+
+---
