@@ -356,3 +356,69 @@ yeah it's just type git restore flag.php to solve the challenge 😄
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FPB1K73I8t2froWnX0wRB%252Fimage.png%3Falt%3Dmedia%26token%3Da327fd65-aa8a-43be-80c6-488832397369&width=768&dpr=4&quality=100&sign=3110024&sv=2)
 
 ---
+# The Restricted Sessions
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 100
+
+
+**description**
+
+Flag is restricted to logged users only , can you be one of them.
+
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F3qCcwjvTo3ncrkI1mUrL%252FScreenshot%25202025-02-13%2520090312.png%3Falt%3Dmedia%26token%3D2742d04a-56f5-4b78-a10a-5407ec9638fa&width=768&dpr=4&quality=100&sign=525f7e75&sv=2)
+
+now we review source code for this lab
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FTpb2kx3dk5Grmb8U5Kbn%252Fimage.png%3Falt%3Dmedia%26token%3Daafa9002-1f34-4881-9448-2d628973e6a3&width=768&dpr=4&quality=100&sign=e7ae72fb&sv=2)
+
+well i'll explain what this block of code.
+
+first checks if the browser has any cookies stored. If there are no cookies, the script does nothing.
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FvwW2PDCFQWvCbdCjDqdX%252Fimage.png%3Falt%3Dmedia%26token%3Dbbcb5a82-3bf2-441f-813b-9219b26bade8&width=768&dpr=4&quality=100&sign=f2c5de72&sv=2)
+
+It uses a regular expression (`/PHPSESSID=([^;]+)/`) to search the cookies for the `PHPSESSID` value and the `match()` method returns an array, and `[1]` accesses the actual session ID value from the capturing group `([^;]+)` (everything after `PHPSESSID=` until the next semicolon),Sends a `POST` request to `getcurrentuserinfo.php` with the session ID in the request body.
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FC9wooCKvcxCo7ZG9Rzt7%252Fimage.png%3Falt%3Dmedia%26token%3D3cf28580-8f52-4d89-8bd5-b7750ac22152&width=768&dpr=4&quality=100&sign=62ada215&sv=2)
+
+now we go to play in cookie i'll use cookie editor (you can burp to intercept and a cookie header but my way it's easier ), well first add cookie named `PHPSESSID` and any value on it and reload the site
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F7uiRdVmcuu7aNoXL5Iy8%252FScreenshot%25202025-02-13%2520092052.png%3Falt%3Dmedia%26token%3D0d118b6a-a8c9-464f-a295-170bf5e9e600&width=768&dpr=4&quality=100&sign=6d2f27de&sv=2)
+
+after reload
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FfOH8Ndp9O4j9JzNJRHue%252FScreenshot%25202025-02-13%2520092048.png%3Falt%3Dmedia%26token%3D2c533747-00f4-44d1-a7f6-96a80bd7c315&width=768&dpr=4&quality=100&sign=676164c7&sv=2)
+
+okay , we goona open this endpoint
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fr6HdknKTmPBV4TqXtuAU%252FScreenshot%25202025-02-13%2520092109.png%3Falt%3Dmedia%26token%3D9d6fe0ef-249b-4453-816a-ea1b64d30e9b&width=768&dpr=4&quality=100&sign=bea7f314&sv=2)
+
+i think it's cookies's values well we try it (replace vlaue) you can use any value
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F7x7fcaRGAj8ddKKVkFUg%252Fimage.png%3Falt%3Dmedia%26token%3D4f28705b-ac1e-4a0f-9a62-d2aff4effa37&width=768&dpr=4&quality=100&sign=22208b73&sv=2)
+
+welll, now we try to access in this endpoint (getcurrentuserinfo.php), first try in your browser to sent request and go to http request to the find it then send it to repeater and modified the request method from Get to Post
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FNsUmYoDCjkl8mAlv5uVx%252FScreenshot%25202025-02-13%2520091349.png%3Falt%3Dmedia%26token%3Daa8db481-c557-469e-a8af-62314da8cb98&width=768&dpr=4&quality=100&sign=c2512547&sv=2)
+
+now send it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FDH3UnHAKUs9zkAuEb3qh%252FScreenshot%25202025-02-13%2520091419.png%3Falt%3Dmedia%26token%3Daf26b23f-62de-4176-89fa-a1e54c43f5bc&width=768&dpr=4&quality=100&sign=f31def9c&sv=2)
+
+yeah haha, now we have the credentiales it's just put it cookie editor (or request i prefer cookie editor it's up to you 😄).
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FJPVZ6bRZ451DOry05MCG%252Fimage.png%3Falt%3Dmedia%26token%3D2475727e-281b-4048-b573-34eb1e8a77a0&width=768&dpr=4&quality=100&sign=f6d2af4f&sv=2)
+
+---
