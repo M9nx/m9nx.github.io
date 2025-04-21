@@ -499,3 +499,52 @@ we got it , just type thank${system('cat flag_23894ABCX1.txt')} to show the file
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FxbVHkVKfmHd9vsxLJccj%252Fimage.png%3Falt%3Dmedia%26token%3D5205aa6e-6a88-4d47-bede-56783e210647&width=768&dpr=4&quality=100&sign=cb39d6b8&sv=2)
 
 ---
+
+# Easy access
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+Only superpower makes you see unlimited view.
+
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FtmVhCZeC6ESMSxkLo5X2%252Fimage.png%3Falt%3Dmedia%26token%3D43a70b2f-d02a-4c55-b889-2d4d8013e54b&width=768&dpr=4&quality=100&sign=1de8df4b&sv=2)
+
+now we try to review source code (ctrl+u)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FIc3jmyeunw7s9bJCVeeH%252Fimage.png%3Falt%3Dmedia%26token%3D9035c5a2-ebf5-4ac9-a291-96d80ade99d5&width=768&dpr=4&quality=100&sign=58794032&sv=2)
+
+now try to login in with this credentials :
+
+```
+username : bob
+
+pass : password
+```
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fv138AKmoXfDTpaw89qHG%252Fimage.png%3Falt%3Dmedia%26token%3Da62b7402-744a-4be1-b7d3-0e2d9a0bf5ab&width=768&dpr=4&quality=100&sign=db5bae06&sv=2)
+
+well, know we try to type payload to bypass authentication and gain unauthorized access to a system. the common one is (' OR 1=1-- -) , I'll try it with above credentials
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FKCzYBBlYVO2kqiEPDtRl%252Fimage.png%3Falt%3Dmedia%26token%3Da64de787-7c07-402a-b851-2365ce34fa79&width=768&dpr=4&quality=100&sign=84918b55&sv=2)
+
+now login
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fj2zMgnehdNZy9cFaIA1n%252Fimage.png%3Falt%3Dmedia%26token%3Dbfac5baf-7838-4e08-9e68-19d1eee77e6e&width=768&dpr=4&quality=100&sign=d76a5b27&sv=2)
+
+well, it's easy one, in common case it's doesn't like this (i mean easy) .
+
+---
