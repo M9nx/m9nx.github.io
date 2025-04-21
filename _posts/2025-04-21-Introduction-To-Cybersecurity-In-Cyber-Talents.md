@@ -734,3 +734,36 @@ Yes ! The parameter that we are looking for is the value stored in rbp-4, but ho
 Still have the message _wrong submission_ popping up ? Easy, just have another look in the challenge description, it indicates that the format should be : **FLAG{0_%X_0}**, %X refers to Hexadecimal; As you can already guess the flag is : **FLAG{0_2CE_0}**
 
 ---
+
+# LOUDER
+
+
+Challenge Information
+
+- **Category:** Digital Forensics
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+My sales manager was annoyed by this sound. However my accountant thought it might mean something. Can you figure it out? P.S: submit flag in a single string
+
+
+**Solution**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FJvKwiH05qTjR6zNahNzl%252FStart%2520GIF%2520by%2520memecandy.gif%3Falt%3Dmedia%26token%3Dc20c6fdb-208a-4646-b3fe-d5e98b3e52d3&width=768&dpr=4&quality=100&sign=64708e27&sv=2)
+
+first download the audio file and go to this website [](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)to get morse code and convert it to text (flag )
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FqtXGz2yCoOEfypyRjCLe%252Fimage.png%3Falt%3Dmedia%26token%3D00621a9c-739f-42f9-a522-4b2de9e47b5e&width=768&dpr=4&quality=100&sign=eb877a75&sv=2)
+
+now upload the noesy audio and get the flag
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FYk5RdDQtezK35Fk36TWI%252Fimage.png%3Falt%3Dmedia%26token%3D39d5978b-3b10-46fd-907c-6a1107fb32a4&width=768&dpr=4&quality=100&sign=37948cbe&sv=2)
+
+now submit it and i know you have a problem to submit it , try to remove the spaces between Letters and submit it 😂
+
+---
