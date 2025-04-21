@@ -422,3 +422,36 @@ yeah haha, now we have the credentiales it's just put it cookie editor (or reque
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FJPVZ6bRZ451DOry05MCG%252Fimage.png%3Falt%3Dmedia%26token%3D2475727e-281b-4048-b573-34eb1e8a77a0&width=768&dpr=4&quality=100&sign=f6d2af4f&sv=2)
 
 ---
+
+# Newsletter
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+the administrator put the backup file in the same root folder as the application, help us download this backup by retrieving the backup file name
+
+
+**Solution**
+
+after access the lab we open it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F1kMaCKwIMh3En8aQhZG5%252Fimage.png%3Falt%3Dmedia%26token%3D418d00ae-ac38-4047-8fc5-dce4f2c2bf2a&width=768&dpr=4&quality=100&sign=30512e8a&sv=2)
+
+now type any valid email and intercepted it in burp and send it to repeater and put the payload (you can search for it ) i will use email ; ls || ,The semicolon (;) will end the statement (line or block of code whatever )to start our commands and the (||) to let the code know the start from (ls) and ignore the dummy mail in the first after typing send the request
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhJGJwIR1Be8BnPrPDOZD%252Fimage.png%3Falt%3Dmedia%26token%3Debe80395-bc2b-4678-bd03-1d2ecb4ad523&width=768&dpr=4&quality=100&sign=1e15ccc0&sv=2)
+
+now send it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fd1Vfhh0eSL1FztmYUwta%252Fimage.png%3Falt%3Dmedia%26token%3Dbbfaec4b-e340-4e63-a680-e88aad0b740d&width=768&dpr=4&quality=100&sign=10ebbccd&sv=2)
+
+---
