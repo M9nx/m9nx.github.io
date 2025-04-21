@@ -703,3 +703,34 @@ now save it and go to your terminal for use netcat, okay open two tapes first ty
 
 ---
 
+# bronze ASM
+
+
+Challenge Information
+
+- **Category:** Digital Forensics
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+An image was leaked from a babies store. the manager is so annoyed because he needs to identify the image to fire charges against the responsible employee. the key is the md5 of the image
+
+
+**Solution**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FuPJZRnZih0iuE5Qj3gRH%252FStart%2520GIF%2520by%2520memecandy.gif%3Falt%3Dmedia%26token%3D483d8f10-fb44-454c-8ac0-0e17bae4dc15&width=768&dpr=4&quality=100&sign=b62d2ea8&sv=2)
+
+we we'll start review source code and implementaion it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FvMVQa7YMrE8iU90I9tCw%252Fimage.png%3Falt%3Dmedia%26token%3D4c320ffb-678b-46b5-b53e-ba77f1c0328c&width=768&dpr=4&quality=100&sign=ff6e5bfe&sv=2)
+
+becuse my information in assembly is so limited I'll get info from other blog the function means to take the local variable stored in rbp-4 multiply it by 8 (left shift by 3) and compare the result with 5744.
+
+Yes ! The parameter that we are looking for is the value stored in rbp-4, but how we are supposed to know it ? Simply suppose that **parameter*8=5744,** that makes the **parameter=718**.
+
+Still have the message _wrong submission_ popping up ? Easy, just have another look in the challenge description, it indicates that the format should be : **FLAG{0_%X_0}**, %X refers to Hexadecimal; As you can already guess the flag is : **FLAG{0_2CE_0}**
+
+---
