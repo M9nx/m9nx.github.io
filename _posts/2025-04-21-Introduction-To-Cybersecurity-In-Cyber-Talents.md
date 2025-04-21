@@ -244,7 +244,9 @@ ctrl + u to open source code badge and search for text you already input in my c
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FjvxF2BB9sp6qZhZjlY6x%252Fimage.png%3Falt%3Dmedia%26token%3Dc42aebbf-a627-40d9-b0e8-7144d6c12a64&width=768&dpr=4&quality=100&sign=61451a58&sv=2)
 
+```
 now we try to put payload to make alert : `<script>alert(1)</script>`
+```
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FsMNwkKXFWIlqMfaR2T7I%252Fimage.png%3Falt%3Dmedia%26token%3D97724459-62fb-4dfd-8702-019f56a45ed6&width=768&dpr=4&quality=100&sign=9b5f72a8&sv=2)
 
