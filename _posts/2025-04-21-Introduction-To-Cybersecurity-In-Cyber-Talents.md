@@ -629,3 +629,38 @@ and upload the audio file you already download it and see content of waves
 
 ---
 
+# bflag
+
+
+Challenge Information
+
+- **Category:** Digital Forensics
+    
+- **Level:** mideum
+    
+- **Points:** 50
+
+
+**description**
+
+All of us started from the bottom. Now it's your turn.
+
+
+**Solution**
+
+after download the file open it in wireshark
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FJMwH5ENN98QlcnSFM7yM%252Fimage.png%3Falt%3Dmedia%26token%3Dac55bc77-7802-4085-989e-f8aeec099dd1&width=768&dpr=4&quality=100&sign=68afe2a5&sv=2)
+
+now add the http in serach filtration to show only http packet
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FF3mdkEtb75kuhv052V6R%252Fimage.png%3Falt%3Dmedia%26token%3D5a8b9016-7e01-4f7d-b3df-a0ea69781626&width=768&dpr=4&quality=100&sign=73944b80&sv=2)
+
+okay, now if you don't find the flag this problem in the lab and the packet contain the is
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F7wD827CA4jLwQV3nUJVr%252Fimage.png%3Falt%3Dmedia%26token%3D815b0329-ad2a-4bdd-93a9-517aa806635f&width=768&dpr=4&quality=100&sign=7ac8b624&sv=2)
+
+now submit this analyze_packet_for_fun , and if you found this packet `<GET /f14g/analyze_packet_for_fun HTTP/1.1\r>` this mean the problem is solved
+
+---
+
