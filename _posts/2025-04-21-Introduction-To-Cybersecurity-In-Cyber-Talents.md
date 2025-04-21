@@ -90,3 +90,36 @@ after submit you see this pop-up
 ---
 
 
+# Hash3rror
+
+
+Challenge Information
+
+- **Category:** Cryptography
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+we got this corrupted hash password from a Pcap file with a note (password = sha-1(hash-result)).
+
+HASH:77be5d24ed2e3e590045e1d6o7e84i50d2799c19f48ede46804a8734e287df120f
+
+
+**Solution**
+
+**we look on the** corrupted hash **⇒** 77be5d24ed2e3e590045e1d6o7e84i50d2799c19f48ede46804a8734e287df120f, so it seems to be maybe 64 characters (We have more letters),well let's say the hash is (SHA-256) , well the hash SHA-256 only include from 0 to f , yeah We now know the two extra letters, which are: i and o after remove them hash will be ⇒ 77be5d24ed2e3e590045e1d6o7e84i50d2799c19f48ede46804a8734e287df120f
+
+we will use this site to decode it ⇒ [https://www.dcode.fr/sha256-has](https://www.dcode.fr/sha256-has)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FFuAxpei1pDzAmazAqrHF%252Fimage.png%3Falt%3Dmedia%26token%3D80ba1c32-19ad-4b43-9d34-767f88e6dfea&width=768&dpr=4&quality=100&sign=38cd4889&sv=2)
+
+and we know the password = sha-1(hash-result),so we do it in same site :
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FiIUh0JOYXlkwKyYdFBMK%252Fimage.png%3Falt%3Dmedia%26token%3D2673e412-9713-4021-bf43-859dee1b0d13&width=768&dpr=4&quality=100&sign=17bdccdb&sv=2)
+
+---
+
