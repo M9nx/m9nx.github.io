@@ -170,3 +170,44 @@ now change the value of cookie to this value and reload site (don't forget save 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F0VAnyQxHhxiaLlekhrfL%252Fimage.png%3Falt%3Dmedia%26token%3Dde7a2412-f72c-47e3-9044-9478ded6cea3&width=768&dpr=4&quality=100&sign=7ac9cfb8&sv=2)
 
 ---
+
+# I am Legend
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+If I am a legend, then why am I so lonely?
+
+Flag Format : FLAG{}
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fs5cwe1rI1eWcfgKGEsC5%252Fimage.png%3Falt%3Dmedia%26token%3De699de06-c491-4ecb-b2e5-7cc548ec44fb&width=768&dpr=4&quality=100&sign=25e8db31&sv=2)
+
+now we try to review source code (ctrl+u)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FGVm1KFtxODapkT9aOya5%252Fimage.png%3Falt%3Dmedia%26token%3D022b02b0-df9c-475e-9896-8889337d6f5b&width=768&dpr=4&quality=100&sign=15c837cd&sv=2)
+
+the line 26 is Obfuscation , so we will try to Deobfuscation in PoisonJS :
+
+link : [https://filipemgs.github.io/poisonjs/](https://filipemgs.github.io/poisonjs/)
+
+hint : (you already delete script tag 😄)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F4LkWTBDd3HiDU8jVOjc9%252Fimage.png%3Falt%3Dmedia%26token%3D1043d639-f5ec-4f60-81df-736cf509788d&width=768&dpr=4&quality=100&sign=80172b80&sv=2)
+
+you can submit the flag or login in with this credentials it's up to you 😂
+
+---
+
