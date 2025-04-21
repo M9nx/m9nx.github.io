@@ -1,8 +1,10 @@
 
+
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FuPJZRnZih0iuE5Qj3gRH%252FStart%2520GIF%2520by%2520memecandy.gif%3Falt%3Dmedia%26token%3D483d8f10-fb44-454c-8ac0-0e17bae4dc15&width=768&dpr=4&quality=100&sign=b62d2ea8&sv=2)
+
+
 # This is Sparta
-
-
-
 
 Challenge Information
 
@@ -11,7 +13,6 @@ Challenge Information
 - **Level:** easy
     
 - **Points:** 50
-
 
 
 **description**
@@ -24,7 +25,6 @@ Morning has broken today they're fighting in the shade when arrows blocked the s
 after access the lab we open it browser
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FUciYOrQV36kPsbzZFdCY%252Fimage.png%3Falt%3Dmedia%26token%3D98655d4c-0f0b-4a5b-810a-a599e3bd61d9&width=768&dpr=4&quality=100&sign=15a7d6eb&sv=2)
-
 
 
 now we try to review source code (ctrl+u)
@@ -767,3 +767,6 @@ now upload the noesy audio and get the flag
 now submit it and i know you have a problem to submit it , try to remove the spaces between Letters and submit it 😂
 
 ---
+
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FyjUlFigR46zwmhk4mssf%252FYou%2520Cant%2520See%2520Me%2520John%2520Cena%2520GIF%2520by%2520WWE.gif%3Falt%3Dmedia%26token%3Defdd24a6-27ba-4ea8-807c-3823aa024f23&width=768&dpr=4&quality=100&sign=23ea3d39&sv=2)
