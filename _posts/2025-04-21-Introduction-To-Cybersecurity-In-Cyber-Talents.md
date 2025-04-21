@@ -1,4 +1,10 @@
-
+---
+published: true
+title: Introduction To Cybersecurity In-Cyber Talents
+date: 2025-03-28 07:40:00 +0200
+categories: cybertalents
+tags: Intro-To-Sec
+---
 
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FuPJZRnZih0iuE5Qj3gRH%252FStart%2520GIF%2520by%2520memecandy.gif%3Falt%3Dmedia%26token%3D483d8f10-fb44-454c-8ac0-0e17bae4dc15&width=768&dpr=4&quality=100&sign=b62d2ea8&sv=2)
