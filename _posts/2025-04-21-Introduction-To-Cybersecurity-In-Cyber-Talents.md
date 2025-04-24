@@ -260,7 +260,7 @@ but it's doesn't work so let's go to see source code 😄
 
 
 <<<<<<< HEAD
-soo, i see it we can close the first script in first of payload like this : </script>......,and open new script tags with the payload finally : </script><script>alert(1)</script>
+soo, i see it we can close the first script in first of payload like this : </script>......,and open new script tags with the payload finally : `</script><script>alert(1)</script>`
 =======
 soo, i see it we can close the first script in first of payload like this : </script>......,and open new script tags with the payload finally : `</script><script>alert(2)</script>`
 >>>>>>> 0835f0bafa7f2e2966c28b9be6cbce05ba334738
@@ -272,7 +272,7 @@ it's a good news, so let's go to get cookie 😄
 we remove 1 and put document.cookie final payload ⇒
 
 <<<<<<< HEAD
-</script><script>alert(document.cookie)</script>
+`</script><script>alert(document.cookie)</script>`
 =======
 `</script><script>alert(document.cookie)</script>`
 >>>>>>> 0835f0bafa7f2e2966c28b9be6cbce05ba334738
