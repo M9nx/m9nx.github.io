@@ -34,8 +34,11 @@ github:
 twitter:
   username: __m9nx            # change to your twitter username
 #Mastadon: 
-  #username: m19o
-
+  #username: 
+  
+include:
+  - site.webmanifest
+  
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
