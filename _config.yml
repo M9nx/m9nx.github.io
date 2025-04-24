@@ -36,8 +36,6 @@ twitter:
 #Mastadon: 
   #username: 
   
-include:
-  - site.webmanifest
   
 social:
   # Change to your full name.
