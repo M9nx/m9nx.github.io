@@ -920,3 +920,52 @@ you should input in src invalid value to make onerror true to get alert and typr
 
 
 ----
+
+# bean
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 50
+
+
+**description**
+
+Come back home Mr. Bean.
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FP5QAS2gpx1aKPBgqGQHt%252FScreenshot%25202025-02-13%2520014943.png%3Falt%3Dmedia%26token%3D1eb4ac98-4344-4817-bea9-ddb97954c33f&width=768&dpr=4&quality=100&sign=649422f9&sv=2)
+
+okay let's go to brute-force directory using **dirsearch**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FNKk12t6SZa4wVaTwnFro%252FScreenshot%25202025-02-13%2520014927.png%3Falt%3Dmedia%26token%3D6ac40940-d982-45f6-aa79-c2a690d13428&width=768&dpr=4&quality=100&sign=4187c7f6&sv=2)
+
+**okay we have good findings , now open this link**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F2HTqqHSRi4sr4Bgj6GYV%252Fimage.png%3Falt%3Dmedia%26token%3D0ec94a67-92dc-45cd-a2fd-b80297f200ba&width=768&dpr=4&quality=100&sign=94f68185&sv=2)
+
+**well ,** Let’s try to using **Path Traversal attack**
+
+**pay load ⇒** [**http://wlemyw93xjyc7zr8r4gvmkxal3dmm73p4y52iqvq-web.cybertalentslabs.com/files/**](http://wlemyw93xjyc7zr8r4gvmkxal3dmm73p4y52iqvq-web.cybertalentslabs.com/files/)**../../../../etc/passwd**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FqaHlGGut2qM6ch820AlZ%252Fimage.png%3Falt%3Dmedia%26token%3D243fcc2e-4849-43e1-a80f-e302e0415f3a&width=768&dpr=4&quality=100&sign=b2a73b69&sv=2)
+
+bad thing it doesn't work and the good thing we now know the web server in nginx and know it's maybe vuln with alias_traversal what is alias dir ? okay The alias directive is used to replace path of the specified location. so by the we now try put two dots before the slash like ../,final path is example.com/name../,in our case it's files../, now we go to try it.
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FLMlpk3eJpYC1FZ4AhuF7%252Fimage.png%3Falt%3Dmedia%26token%3D566d8f79-1f6a-4e51-bf77-f13887a23fbd&width=768&dpr=4&quality=100&sign=d8849ea7&sv=2)
+
+last thing to find the path of flag ,I searched for it a lot before. You can do that, but for now I will say the path directly. well path is /files../home/flag.txt
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fg1MmEnHlIlq795HteKhl%252Fimage.png%3Falt%3Dmedia%26token%3Deb742eaf-d814-42dd-ab16-975c3f699292&width=768&dpr=4&quality=100&sign=804b2461&sv=2)
+
+for more info about alias ⇒ [https://github.com/yandex/gixy/blob/master/docs/en/plugins/aliastraversal.md](https://github.com/yandex/gixy/blob/master/docs/en/plugins/aliastraversal.md)
+
+----
+
