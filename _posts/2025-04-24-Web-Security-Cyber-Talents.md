@@ -685,3 +685,65 @@ now login
 well, it's easy one, in common case it's doesn't like this (i mean easy) .
 
 ----
+
+# ConCmarks
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+it might be useful to find a mark.
+
+
+**Solution**
+
+after access the lab we inspect main page
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FAQPXmjrjhiKmwg96COdZ%252Fimage.png%3Falt%3Dmedia%26token%3Dda0f2582-c49f-479c-933e-2ad7d0259877&width=768&dpr=4&quality=100&sign=24216ea8&sv=2)
+
+this mean we have endpoint called `sourceXXXX` and `XXXX` have value from 7000 --> 9000 so I'll first send request and intercepted it and send it to intruder to fuzz correct value to get access in this endpoint
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhLI57tV45jcxZ4kAXR89%252FScreenshot%25202025-02-21%2520095815.png%3Falt%3Dmedia%26token%3Db9fd7a8c-90fa-4f51-a1f3-0110ecc0565d&width=768&dpr=4&quality=100&sign=8857c2c7&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fjs9zF4mOEBnOzT1qfWXp%252FScreenshot%25202025-02-21%2520095839.png%3Falt%3Dmedia%26token%3D971e5334-210c-4197-aeb9-9dba14864a19&width=768&dpr=4&quality=100&sign=d89de86b&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FS9tdpbGw4f0NFZxznMuG%252FScreenshot%25202025-02-21%2520095857.png%3Falt%3Dmedia%26token%3D37e8fb20-5f06-4a31-b9da-8ebd670a95d3&width=768&dpr=4&quality=100&sign=7f34dc91&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fg2QNJuK6mzJOKWXOkCns%252FScreenshot%25202025-02-21%2520095916.png%3Falt%3Dmedia%26token%3Dc8e48908-baef-435d-a3c4-e5e7e0e8ce41&width=768&dpr=4&quality=100&sign=1ba3f160&sv=2)
+
+now select payload type --> number and make number range from 7000 to 9000 and count step equal one so now we have 2001 request to check it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fovwi0gbuk3mFi2O4S2Th%252FScreenshot%25202025-02-21%2520100011.png%3Falt%3Dmedia%26token%3D97aca76e-1f9d-49c6-a20e-2f9e216a1b84&width=768&dpr=4&quality=100&sign=2429bd89&sv=2)
+
+and select sniper attack
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Ftn0PStrdgXhMIdHA50BW%252FScreenshot%25202025-02-21%2520100019.png%3Falt%3Dmedia%26token%3Df4b26ba2-1d0e-4f95-b5c1-c4617a4ca13b&width=768&dpr=4&quality=100&sign=883d6deb&sv=2)
+
+from status code select 200 OK one
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FZ8KfRAHJUhHviqwWPXTk%252FScreenshot%25202025-02-21%2520101432.png%3Falt%3Dmedia%26token%3D655c5e1a-5e4a-485f-845a-8be7d102b1d4&width=768&dpr=4&quality=100&sign=44e72e19&sv=2)
+
+and i search to bypass this condition and get flag
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FIN2oRn2ikiYfJ8tP8ne7%252FScreenshot%25202025-02-21%2520101504.png%3Falt%3Dmedia%26token%3Dfc2bb8c3-7b1b-4d06-996b-dd9796102fa0&width=768&dpr=4&quality=100&sign=f3fa62a0&sv=2)
+
+First i we'll explain what this condition do well, The code is a PHP script that takes two GET parameters (`n1` and `n2`), hashes them using `md5` with a salt, and checks if the hashes are identical while ensuring that `input1` and `input2` are different. If the condition is met, it prints the flag; otherwise, it prints "Sorry this value not valid."
+
+```
+if( $input1 !== $input2 && @hash("md5", $salt.$input1) === @hash("md5", $salt.$input2) ) /*check input1 must not be identical (!==) to input2 (strict comparison)
+  and The MD5 hashes of salt + input1 and salt + input2 must be identical.*/
+```
+
+this means we need two **different** inputs that produce the same MD5 hash when concatenated with `$salt` so after search again i found the way to bypass this condition using **PHP type juggling** with arrays ,so i already use this payload to bypass n1[]= & n2[]=any_value , I'll explain it now . Instead of sending normal string values for `n1` and `n2`,i send them as **arrays** using `n1[]= & n2[]=1` and PHP automatically converts query parameters with `[]` into arrays (`$_GET['n1']` and `$_GET['n2']` become arrays instead of strings) , When PHP hashes an array with `@hash("md5", $salt.$input1)`, it **throws a warning** and returns `NULL` so the condition **evaluates to** `**true**`, because `$input1 !== $input2` (arrays are different ) and `@hash("md5", NULL) === @hash("md5", NULL)` is **true. Now** put this payload and send it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fq0CmRqBAIAS2Pq3yJD1K%252Fimage.png%3Falt%3Dmedia%26token%3D52d62987-eba6-4119-84b9-907e01e07936&width=768&dpr=4&quality=100&sign=19d5543c&sv=2)
+
+---
+
