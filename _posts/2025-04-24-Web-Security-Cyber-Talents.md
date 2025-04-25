@@ -747,3 +747,38 @@ this means we need two **different** inputs that produce the same MD5 hash when 
 
 ---
 
+# Private Agent
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+Only private agents can make their way to the gate.
+
+
+**Solution**
+
+after access the lab we inspect main page
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fac4xIGlcMp371ApIA0M7%252FScreenshot%25202025-02-21%2520105905.png%3Falt%3Dmedia%26token%3D029648bc-3ba4-4c86-9452-231afc316704&width=768&dpr=4&quality=100&sign=6c21245&sv=2)
+
+from above he get us value for user agent to get private access so got to burp and intercept request and change user agent value to given value --> givittome
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FtDpBaz8rrlCyw3SG0zVj%252FScreenshot%25202025-02-21%2520105811.png%3Falt%3Dmedia%26token%3Db2b0bc11-45f2-4229-9973-00b11c191a20&width=768&dpr=4&quality=100&sign=4c685da&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FwD2hmDxnHfS4VtS4woXm%252FScreenshot%25202025-02-21%2520105846.png%3Falt%3Dmedia%26token%3Da16bdd1a-6278-4c60-8b11-138b2ba7114a&width=768&dpr=4&quality=100&sign=e1d8d8d9&sv=2)
+
+and we found flag as header in response
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FGvklpWlnn60aplBzBuz1%252Fimage.png%3Falt%3Dmedia%26token%3D0269c121-b435-4437-bd1b-761f511e5e52&width=768&dpr=4&quality=100&sign=62911fc0&sv=2)
+
+----
+
