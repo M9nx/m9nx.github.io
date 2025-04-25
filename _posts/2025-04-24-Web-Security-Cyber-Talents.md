@@ -873,3 +873,50 @@ well , now try to input payload to make alert (XSS) u can use this payload `admi
 
 ----
 
+# uGame
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+we are creating a new social media app for gaming , make sure its secure enough.
+
+**Solution**
+
+after access the lab u see input text i try to input any value to see where it's stored in source code
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FNYbMLTNNI5axD1ky0UOa%252Fimage.png%3Falt%3Dmedia%26token%3D5dc77dec-bbc1-4683-a632-d4ab747ae237&width=768&dpr=4&quality=100&sign=2c3e1c85&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FWqClNL7hA9KatGS6rFvH%252Fimage.png%3Falt%3Dmedia%26token%3De027bb05-a557-468d-9aee-7f3abf658da7&width=768&dpr=4&quality=100&sign=12cff6d3&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FoYUI4SXN0pbnNYjfk3cH%252Fimage.png%3Falt%3Dmedia%26token%3D5721473b-7a78-45a5-ad5f-a940f4c45c46&width=768&dpr=4&quality=100&sign=d5876915&sv=2)
+
+now after type any value I'll try to input simple payload to get alert
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FPtOL28YT5trQodwLXBkg%252Fimage.png%3Falt%3Dmedia%26token%3D18b277c4-94db-47b9-adb3-c2fce8f70d4d&width=768&dpr=4&quality=100&sign=7e0c9087&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FH2v53eEd0UWDg8fSuHmK%252Fimage.png%3Falt%3Dmedia%26token%3De261bd4b-f956-409e-9be2-69e7dea6fb95&width=768&dpr=4&quality=100&sign=fd8c7fc8&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F5RcxmZ2SXhyPnfMlqjIN%252Fimage.png%3Falt%3Dmedia%26token%3Da9ca98de-b441-440e-a272-c31d39ea6481&width=768&dpr=4&quality=100&sign=b5c5172&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FsSlfeKEsGfRaawHn6MFK%252Fimage.png%3Falt%3Dmedia%26token%3D23a68b3f-5afb-4c85-9963-cf0ecca948a5&width=768&dpr=4&quality=100&sign=85d0e09c&sv=2)
+
+okay , from above we now know the validation skip any thing after `<script` so , I'll try to use < svg or <img , anything without `<script >`so the final payload is :
+
+``<svg src=<any_invalid_value> onerror=alert(1)>``
+
+you should input in src invalid value to make onerror true to get alert and typr it you get the flag in alert
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FfMz2BYGdZ2y7xdZVqsAk%252Fimage.png%3Falt%3Dmedia%26token%3Deaf390e5-ca04-480d-8686-7a17cdadc33d&width=768&dpr=4&quality=100&sign=5f3cfc&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FsiVgnHGnG7g7Qm8D83jw%252Fimage.png%3Falt%3Dmedia%26token%3De69a30cb-74f5-4eef-8e27-e665ec999768&width=768&dpr=4&quality=100&sign=ede7110f&sv=2)
+
+
+----
