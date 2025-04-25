@@ -549,3 +549,43 @@ and send it
 
 
 ----
+
+# Back to basics
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+I Have a Message for you.
+
+**Solution**
+
+after access the lab
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F6dw4JOnhSaJwAvTizPvu%252Fimage.png%3Falt%3Dmedia%26token%3D619b467b-b510-4911-b354-b0a526a9660b&width=768&dpr=4&quality=100&sign=3cee91ce&sv=2)
+
+and if you try to review source code you got this
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F1YUCMYWbcAnJPpCXZmtI%252Fimage.png%3Falt%3Dmedia%26token%3D788e0e71-c493-4775-b4ae-717ae93432a0&width=768&dpr=4&quality=100&sign=5bb6c9c2&sv=2)
+
+so, from the name of lab tell us to back to basics , so i open dev tools and review network tarffic you can use burp but it doesn't need it , just click f-12 to see dev tools
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F9fpZ0kOS8toJ29m6DBw1%252Fimage.png%3Falt%3Dmedia%26token%3Df9308dc6-05a6-48d6-bcb1-9dd5b69f6304&width=768&dpr=4&quality=100&sign=d7ab4388&sv=2)
+
+like this , now click on network and reload page
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhprdapycoIQpaLnEi1Fn%252Fimage.png%3Falt%3Dmedia%26token%3De1626cb7-0bb9-4cae-834e-789fde6d5d31&width=768&dpr=4&quality=100&sign=4527a44a&sv=2)
+
+you got this , now go to and check every request, and you found it ( i mean flag ) in second request
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FnWhneqFhqtBiLCqwZmaH%252Fimage.png%3Falt%3Dmedia%26token%3D8841167f-29e8-4ea6-b53d-8ce94d520c77&width=768&dpr=4&quality=100&sign=c7fc3678&sv=2)
+
+---
+
