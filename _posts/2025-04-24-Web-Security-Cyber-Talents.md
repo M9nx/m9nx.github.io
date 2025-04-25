@@ -836,3 +836,40 @@ okay we got value (first remove spaces ) and go to lab and create cookie called 
 
 ----
 
+# x corp
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+X corp made a new filtration for input data , prove it is secure enough
+
+**Solution**
+
+after access the lab we review source code
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FnDViFth0W9CdWCxBUJkI%252FScreenshot%25202025-02-21%2520114837.png%3Falt%3Dmedia%26token%3Dcce0ee85-b4be-4151-8d76-5c149a037d04&width=768&dpr=4&quality=100&sign=6b691d48&sv=2)
+
+well we missing quote and it based in span so I'll try to close quote
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fh6Mlpgxig6qUQhcUD6i5%252FScreenshot%25202025-02-21%2520114843.png%3Falt%3Dmedia%26token%3D93e24856-21ff-427f-a9bd-da34ddbeba6a&width=768&dpr=4&quality=100&sign=790be2f6&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FRcWd1r5lBKtUjMfIkP4a%252FScreenshot%25202025-02-21%2520114905.png%3Falt%3Dmedia%26token%3D1ee62f33-6167-4b59-ab08-4b27f3daa35c&width=768&dpr=4&quality=100&sign=5ed52620&sv=2)
+
+well , now try to input payload to make alert (XSS) u can use this payload `admin'onload=alert(1)'` first quote to close opne one and add onload action
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FYsSdJQO2S5vVEOwHGceX%252FScreenshot%25202025-02-21%2520115111.png%3Falt%3Dmedia%26token%3De6913a0b-965d-40a8-8d96-346a06f0bd23&width=768&dpr=4&quality=100&sign=e06de7b6&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FHzYbNgrWFUx9OFFZHqY5%252FScreenshot%25202025-02-21%2520115132.png%3Falt%3Dmedia%26token%3D627ccb24-a5c3-473c-9059-51fc65f94f00&width=768&dpr=4&quality=100&sign=c01621dd&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F2bzZqgiDHjkNbe31alNL%252Fimage.png%3Falt%3Dmedia%26token%3D84510c45-1be2-444c-bea1-714587d505c6&width=768&dpr=4&quality=100&sign=d3ae90e3&sv=2)
+
+----
+
