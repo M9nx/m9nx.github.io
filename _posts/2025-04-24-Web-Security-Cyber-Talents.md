@@ -187,3 +187,74 @@ you can submit the flag or login in with this credentials it's up to you 😂
 
 ---
 
+# Cool Name Effect
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+Webmaster developed a simple script to do cool effects on your name, but his code not filtering the inputs correctly execute JavaScript alert and prove it.
+
+
+**Solution**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FyuNKmmYLXqOsafz9EbWX%252FStarting%2520John%2520Wick%2520GIF%2520by%2520John%2520Wick%2520Chapter%25203%2520-%2520Parabellum.gif%3Falt%3Dmedia%26token%3D01334ce7-1f5f-4088-a8fe-81696eaa7922&width=768&dpr=4&quality=100&sign=4297adf7&sv=2)
+
+after access the lab we open it we try to type any special character like (<,>,(,),etc.) see if there is any filter or not
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FoqCryMVTLsrbq4AdAJAm%252Fimage.png%3Falt%3Dmedia%26token%3D91e9a723-47b4-41ba-9e89-7421ae5fff00&width=768&dpr=4&quality=100&sign=ef25efff&sv=2)
+
+now let's go to see source code to check is the filtering process available or not?
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FA0GDbaQaq0wHyfNYEyfa%252Fimage.png%3Falt%3Dmedia%26token%3Da3fe0d59-aa51-4f44-b6e8-cd9919a19885&width=768&dpr=4&quality=100&sign=b655fa5b&sv=2)
+
+okay we two good findings but we'll focus on line 25 because it's start with eval() function this mean this line is obfuscated and I'll use this [site](http://deobfuscatejavascript.com/index_html#) to deobfuscated
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fa4vhnI5VP7nEggigYl0f%252Fimage.png%3Falt%3Dmedia%26token%3De79235fa-a96b-4567-b350-ddc413e5ceb8&width=768&dpr=4&quality=100&sign=909edcb5&sv=2)
+
+well , i already review this function and found weakness point in this function
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FAUWsfsqK5GZdBQEsM9o8%252Fimage.png%3Falt%3Dmedia%26token%3D9318a374-247c-41c5-92f1-681332627927&width=768&dpr=4&quality=100&sign=3e5d446c&sv=2)
+
+okay , I'll explain what this function do
+
+```
+var legacyAlert = alert;
+var newAlert = function() { ... }; // to save the same functionality of alert in legacyalert
+
+var z = ['y', 'o', 'u', 'r', ' ', 'f', 'l', 'a', 'g', ' ', 'i', 's', ':']; // array of character (c-string ) contain (your flag is :)
+
+var f = ([]["fill"] + "")[3];
+f += ([false] + undefined)[10];
+f += (NaN + [Infinity])[10];
+f += (NaN + [Infinity])[10];
+f += (+211) + "")[3];
+f += (+35) ; //this lines make variable called f and every line updates it value by unexpected values
+
+```
+
+well to this value (unexpected values) , i'll use [online interpreter](https://playcode.io/javascript) and makes is to print this value by console.log() function
+
+```
+var z = ['y', 'o', 'u', 'r', ' ', 'f', 'l', 'a', 'g', ' ', 'i', 's', ':'];
+var f = ([]["fill"] + "")[3];
+f += ([false] + undefined)[10];
+f += (NaN + [Infinity])[10];
+f += (+(211))["to" + String["name"]](31)[1];
+f += ([]["entries"]() + "")[3];
+f += (+(35))["to" + String["name"]](36);
+console.log(z.join('') + f)
+```
+
+and you will get output (this is flag )
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F65svD9SZNIunjVBfEJ7D%252Fimage.png%3Falt%3Dmedia%26token%3D97bdcc2d-7144-4af6-b231-9c27cd3bf714&width=768&dpr=4&quality=100&sign=c0f2b536&sv=2)
+
+---
