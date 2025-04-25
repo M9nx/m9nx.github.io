@@ -445,3 +445,63 @@ well, try to your profile to get the flag 😄
 
 ---
 
+# Easy Message
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+I Have a Message for you.
+
+**Solution**
+
+after access the lab we open it browser , we found sign in page and we don't have any credentials to login so after search i found endpoint called /robots.txt
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FXpC8pfgK2e271iggvp5K%252Fimage.png%3Falt%3Dmedia%26token%3D9421dfbd-0518-4dda-9ece-47716d085ac9&width=768&dpr=4&quality=100&sign=459ae2ff&sv=2)
+
+well, another endpoint let's open it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FQsj0ojg9PDKlm27U7lhd%252Fimage.png%3Falt%3Dmedia%26token%3Da8398c81-1054-44a4-b483-20792034e590&width=768&dpr=4&quality=100&sign=9ff59ae7&sv=2)
+
+I'll explain the functionality of this block of code
+
+```
+$user = $_POST['user'];
+$pass = $_POST['pass']; //create two post parameter called user and pass
+
+include('db.php'); //contain file called db.php
+
+if ($user == base64_decode('Q3liZXItVGFsZW50') && $pass == base64_decode('Q3liZXItVGFsZW50'))
+    {
+        success_login();
+    }
+    else {
+        failed_login();
+} // if the condition is true we are able to login and if false were not able to login 
+```
+
+well to make the condition true we must login with this credentials , first we'll decode it I'll use this [website](https://www.base64decode.org/)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FvpHGh2vK2YFtpITRKFDn%252Fimage.png%3Falt%3Dmedia%26token%3D6a653182-2af7-4541-8073-cc1da7249d35&width=768&dpr=4&quality=100&sign=15d6fb37&sv=2)
+
+now let's try to login with this credentials
+
+```
+user : Cyber-Talent
+pass : Cyber-Talent
+```
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F5nrSwTxKaVvYyJd0pX0l%252Fimage.png%3Falt%3Dmedia%26token%3D0b20c9e3-b8ab-45c9-abc6-cd1790419f37&width=768&dpr=4&quality=100&sign=985e63f3&sv=2)
+
+ohh, this like morse code I'll translate it with this [site](https://morsecodetranslator.com/)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FmJUyUE97FWjHb6s5HT6M%252Fimage.png%3Falt%3Dmedia%26token%3D0d02199b-93f6-48c8-9711-e9b451777c8a&width=768&dpr=4&quality=100&sign=4f2d968a&sv=2)
+
+---
