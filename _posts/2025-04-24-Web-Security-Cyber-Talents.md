@@ -213,7 +213,7 @@ now let's go to see source code to check is the filtering process available or n
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FA0GDbaQaq0wHyfNYEyfa%252Fimage.png%3Falt%3Dmedia%26token%3Da3fe0d59-aa51-4f44-b6e8-cd9919a19885&width=768&dpr=4&quality=100&sign=b655fa5b&sv=2)
 
-okay we two good findings but we'll focus on line 25 because it's start with eval() function this mean this line is obfuscated and I'll use this [site](http://deobfuscatejavascript.com/index_html#) to deobfuscated
+okay we two good findings but we'll focus on line 25 because it's start with eval() function this mean this line is obfuscated and I'll use this `[site](http://deobfuscatejavascript.com/index_html#)` to deobfuscated
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fa4vhnI5VP7nEggigYl0f%252Fimage.png%3Falt%3Dmedia%26token%3De79235fa-a96b-4567-b350-ddc413e5ceb8&width=768&dpr=4&quality=100&sign=909edcb5&sv=2)
 
