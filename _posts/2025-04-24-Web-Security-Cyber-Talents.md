@@ -782,3 +782,57 @@ and we found flag as header in response
 
 ----
 
+# COMRADE III
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+Hey Comrade , World War III will begin soon , we need to reveal what was hidden.
+
+
+**Solution**
+
+after access the lab we review source code
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FjnLyAlDSzR1ZuDdnXJZ6%252FScreenshot%25202025-02-21%2520112903.png%3Falt%3Dmedia%26token%3De5ebcf4e-82db-456d-80e6-6a2bcd25af04&width=768&dpr=4&quality=100&sign=12075441&sv=2)
+
+and we have nothing so , I'll use `dirb` tool
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FSPAv0SnXJYEqKsGByxAY%252FScreenshot%25202025-02-21%2520112922.png%3Falt%3Dmedia%26token%3Dbcf66f9e-3dd2-45ea-b95d-ba3464535871&width=768&dpr=4&quality=100&sign=ac26db06&sv=2)
+
+good findings, we now know .git endpoint so ,I'll use dumber from GitTools
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FlO1DgPLab9efWf9KTu00%252FScreenshot%25202025-02-21%2520112930.png%3Falt%3Dmedia%26token%3D6b9d41db-8d71-455a-8430-679b9948b033&width=768&dpr=4&quality=100&sign=be18a50b&sv=2)
+
+now use this command to see status of folder --> `git status`
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fx0LlgfoxpORbMHmbCkqx%252FScreenshot%25202025-02-21%2520112937.png%3Falt%3Dmedia%26token%3Da9038b22-a673-4dda-8a1b-cff940c6483e&width=768&dpr=4&quality=100&sign=e70fe30&sv=2)
+
+and use this command to restore any file --> `git restore <name of file>` i already restore all of them and i found good findings on api.php
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FIQJ6cRCBtoZF2e5JQ4vL%252FScreenshot%25202025-02-21%2520113001.png%3Falt%3Dmedia%26token%3D81092b69-4804-45aa-94d8-3a87fa00cdea&width=768&dpr=4&quality=100&sign=56e53c3f&sv=2)
+
+okay if we bypass this condition we got the flag so, i well explain how to bypass it . in this condition found cookie called api_key and it's check if it's true or false so , after i search i found the value of api_key in file called contact_process.php
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FDhQKdQPDlFFUTDSO4ssP%252Fimage.png%3Falt%3Dmedia%26token%3Db49c73e0-1d39-4fe5-a878-eaa1cf24a321&width=768&dpr=4&quality=100&sign=8e3bb20e&sv=2)
+
+bin2hex !! let's go to convert this string to hex from this [site](https://onlinestringtools.com/convert-string-to-hexadecimal)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FC90qmDDUpR2Yw5AwHLSs%252Fimage.png%3Falt%3Dmedia%26token%3D143a6590-4b40-4462-9962-2661a20e3c5f&width=768&dpr=4&quality=100&sign=ba5c4d11&sv=2)
+
+okay we got value (first remove spaces ) and go to lab and create cookie called api_key and set it's value to `746869735f69735f746f705f736563726574` and reload page to see flag
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FoUQZ7rXE3uBGhOz5A37N%252FScreenshot%25202025-02-21%2520113206.png%3Falt%3Dmedia%26token%3Dd7bf5d9d-d63f-493a-8ea8-95eb51559af6&width=768&dpr=4&quality=100&sign=88ecad53&sv=2)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Flghduva5sUXYmFFXsQRR%252Fimage.png%3Falt%3Dmedia%26token%3D4418c734-db81-4a2b-9d13-8f76ea8b1cd6&width=768&dpr=4&quality=100&sign=6ebfe988&sv=2)
+
+----
+
