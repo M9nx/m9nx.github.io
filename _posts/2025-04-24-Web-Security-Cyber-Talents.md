@@ -205,8 +205,6 @@ Webmaster developed a simple script to do cool effects on your name, but his cod
 
 **Solution**
 
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FyuNKmmYLXqOsafz9EbWX%252FStarting%2520John%2520Wick%2520GIF%2520by%2520John%2520Wick%2520Chapter%25203%2520-%2520Parabellum.gif%3Falt%3Dmedia%26token%3D01334ce7-1f5f-4088-a8fe-81696eaa7922&width=768&dpr=4&quality=100&sign=4297adf7&sv=2)
-
 after access the lab we open it we try to type any special character like (<,>,(,),etc.) see if there is any filter or not
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FoqCryMVTLsrbq4AdAJAm%252Fimage.png%3Falt%3Dmedia%26token%3D91e9a723-47b4-41ba-9e89-7421ae5fff00&width=768&dpr=4&quality=100&sign=ef25efff&sv=2)
@@ -258,3 +256,69 @@ and you will get output (this is flag )
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F65svD9SZNIunjVBfEJ7D%252Fimage.png%3Falt%3Dmedia%26token%3D97bdcc2d-7144-4af6-b231-9c27cd3bf714&width=768&dpr=4&quality=100&sign=c0f2b536&sv=2)
 
 ---
+
+# Encrypted Database
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+The company hired an inexperienced developer, but he told them he hided the database and have it encrypted so the website is totally secure, can you prove that he is wrong ??
+
+
+**Solution**
+
+**well, after we access the lab we try to find any input field to inject it but i didn't found anu input field**
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F8phFFDyusVAc7NRF9Kcp%252Fimage.png%3Falt%3Dmedia%26token%3D8268b805-95aa-49c7-9612-0e2d1640442e&width=768&dpr=4&quality=100&sign=faef08d8&sv=2)
+
+now , let's go to review page source code hope to find any thing
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FLofozTYf0xDFp1XvnwjY%252Fimage.png%3Falt%3Dmedia%26token%3Daf754b00-a4fc-4855-8794-3f3bedc726b4&width=768&dpr=4&quality=100&sign=976e4aae&sv=2)
+
+okay, now we know we have /admin endpoint let's to access on it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FIDdRC4uZdSmUlvkynBnq%252Fimage.png%3Falt%3Dmedia%26token%3Db93fc50c-a1e1-4892-9160-1bf1c00ecc8c&width=768&dpr=4&quality=100&sign=ddc0b452&sv=2)
+
+well ,we don't have access let's try baypass it with this [bypass-403](https://github.com/iamj0ker/bypass-403) tool install it and type this command
+
+```
+./baypass-403.sh our_target (name of endpoint ) //in our case name of endpoint =>admin
+```
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fcv1aZ7bf5Wvd6Os0m52U%252Fimage.png%3Falt%3Dmedia%26token%3D93ecb113-b935-41c5-93aa-afc81b78cabe&width=768&dpr=4&quality=100&sign=75fc2af9&sv=2)
+
+all of this urls lead to the same endpoint now open it to see admin page login
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FTO6t4XZR6wWwZqHNH6bZ%252Fimage.png%3Falt%3Dmedia%26token%3Db9ad7b36-94b9-4957-8744-bef188547846&width=768&dpr=4&quality=100&sign=872d9fc9&sv=2)
+
+we don't have any credentials to login in so let's review page source code
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FdOYwG3VLHauzjx9sKXT5%252Fimage.png%3Falt%3Dmedia%26token%3D324afc2f-6024-44f7-b9c7-19419a5e5c5b&width=768&dpr=4&quality=100&sign=95a67894&sv=2)
+
+okay we find another endpoint
+
+```
+target//admin/secret-database/db.json #final endpoint 
+```
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FLR28DnqRO3dkHTo4xnfD%252Fimage.png%3Falt%3Dmedia%26token%3Df546277c-9b13-4b7b-b5ea-c437f728b6f3&width=768&dpr=4&quality=100&sign=f1d510dd&sv=2)
+
+okay if you try to submit this flag you get wrong so let's try to see if it encrypted or no wit this [site](https://www.tunnelsup.com/hash-analyzer/)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FNNw7WfPzsUY7Ie5WuAi8%252Fimage.png%3Falt%3Dmedia%26token%3D2f71ddfc-356d-42f8-a2b5-f903f15171fd&width=768&dpr=4&quality=100&sign=9aa7a8fe&sv=2)
+
+now we know it's already hashed with MD5 so i'll decrypt it in this [site](https://m9nx-11.gitbook.io/m9nx_11/writeups/cyber-talents/introduction-to-cyber-security-in-cyber-talents/i-am-legend)
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FrPfIshbcQztUMHlaX3o3%252Fimage.png%3Falt%3Dmedia%26token%3Dcdce6963-ad81-4065-a6b4-aad16ac0af93&width=768&dpr=4&quality=100&sign=79f13bdb&sv=2)
+
+---
+
