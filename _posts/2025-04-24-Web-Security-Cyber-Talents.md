@@ -402,3 +402,46 @@ now change the value of cookie to this value and reload site (don't forget save 
 
 ---
 
+# Blue Inc
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+**description**
+
+Blue Inc is a new social media website that's still under construction, However it doesn't have registration yet, but if you are interested in seeing our website then you can login with demo/demo.
+
+**Solution**
+
+after access the lab we open it browser , we login in with credentials we found in lab's description
+
+Copy
+
+```
+username : demo
+password : demo
+```
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FCPjCedR0xH18CN4PMs7v%252Fimage.png%3Falt%3Dmedia%26token%3Db82576a8-cd29-4305-89a1-b1cb886927f0&width=768&dpr=4&quality=100&sign=f85fdfe6&sv=2)
+
+after login with credentials in above , we check cookies of website with cookie editor extension
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FwUc7bVNLsc2MA2mXDF82%252Fimage.png%3Falt%3Dmedia%26token%3Dea8ca355-bd4f-4686-8bbd-8f6f12e696e5&width=768&dpr=4&quality=100&sign=fd466bdd&sv=2)
+
+okay , let's update this value to admin or administrator (high privileges ) and reload website
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fcs8gzbCDUgTB80Pn6h47%252Fimage.png%3Falt%3Dmedia%26token%3Dc9160065-58d1-4478-ac37-89c16b400a69&width=768&dpr=4&quality=100&sign=89b24625&sv=2)
+
+well, try to your profile to get the flag 😄
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F7c53aINn2IfOqq13sZFR%252Fimage.png%3Falt%3Dmedia%26token%3D1e92bbbf-fcf3-4dd3-b1f7-912bf94b71f1&width=768&dpr=4&quality=100&sign=dc1e9b39&sv=2)
+
+---
+
