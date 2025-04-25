@@ -505,3 +505,47 @@ ohh, this like morse code I'll translate it with this [site](https://morsecodetr
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FmJUyUE97FWjHb6s5HT6M%252Fimage.png%3Falt%3Dmedia%26token%3D0d02199b-93f6-48c8-9711-e9b451777c8a&width=768&dpr=4&quality=100&sign=4f2d968a&sv=2)
 
 ---
+
+# Cheers
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+I Have a Message for you.
+
+**Solution**
+
+after access the lab
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FbtVR4BrqDUaHOMQnAxDV%252FScreenshot%25202025-02-20%2520164502.png%3Falt%3Dmedia%26token%3De2769184-d5e3-48c7-9c96-b08f0a69693a&width=768&dpr=4&quality=100&sign=49312606&sv=2)
+
+and i already review source and i got no thing
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fl9n7eI072JQe3Uk9k49j%252Fimage.png%3Falt%3Dmedia%26token%3D84d499d3-05a4-4eb8-87dc-e4b1b7a0597d&width=768&dpr=4&quality=100&sign=f4a2efd8&sv=2)
+
+so , we see he tell us undefined index this mean un initialized (i mean it doesn't have value ) so i'll we try to send it as parameter and set any value like this :
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FSWNVaGYl1AAHj5aLobZp%252FScreenshot%25202025-02-20%2520164534.png%3Falt%3Dmedia%26token%3Dcfaa2203-d6a3-4c96-801b-a5e48363a129&width=768&dpr=4&quality=100&sign=48a10add&sv=2)
+
+and send
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FEQ26JB7WERLgQxkndg1w%252Fimage.png%3Falt%3Dmedia%26token%3D12a9801d-38f3-403d-9b4a-3b41a2bf03bd&width=768&dpr=4&quality=100&sign=e5cf94c8&sv=2)
+
+well, it's great finding now we repeat same proccess with gimme_flag parameter like this :
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FHHmIITJSX8TtA1ndZptF%252FScreenshot%25202025-02-20%2520164611.png%3Falt%3Dmedia%26token%3D8c8a6a02-3fe0-4ea0-9c30-9d7bd058e0f6&width=768&dpr=4&quality=100&sign=d04a5055&sv=2)
+
+and send it
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F5N65WuZyGCbPPpeN8Cyn%252Fimage.png%3Falt%3Dmedia%26token%3Dc36950c2-7f3c-4bff-8c9b-ef0819a80de0&width=768&dpr=4&quality=100&sign=3925be49&sv=2)
+
+
+----
