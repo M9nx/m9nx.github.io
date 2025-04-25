@@ -589,3 +589,53 @@ you got this , now go to and check every request, and you found it ( i mean flag
 
 ---
 
+# Maximum Courage
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+**description**
+
+Max prefers to learn by practicing and not just reading all day, so he set up a webserver and hopes it stays secret, can you prove it has a weakness?
+
+
+**Solution**
+
+after access the lab we open it browser
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FyyK7nOyBgoruu2y7AYtG%252Fimage.png%3Falt%3Dmedia%26token%3D37d32baa-b274-4cd9-92af-208b129a53ab&width=768&dpr=4&quality=100&sign=83a7cd39&sv=2)
+
+okaay we don't have access to open flag.php (the aim is to open it because it contain the flag )
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FZ9OC94j2n64JoDRZHTSv%252Fimage.png%3Falt%3Dmedia%26token%3Dbb804b07-31ea-4349-8641-9fc6df01ea84&width=768&dpr=4&quality=100&sign=6e41735b&sv=2)
+
+now we need a tool to Scan the web server for directories, i will use drib you can find it here [https://github.com/andrenth/drib](https://github.com/andrenth/drib),well let's go to our terminal command line (drib target )
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F0GAaGQjcyTA18Y2ivaGW%252Fimage.png%3Falt%3Dmedia%26token%3D10fd4be6-40e9-4f38-8fbc-9c836aa76cfe&width=768&dpr=4&quality=100&sign=8fcdef82&sv=2)
+
+okay goog findings if we open this url we found another path , i opend it and it's unuseful but we know that this website has /.git so that’s mean that this website has Git directories , i will gittools for it you can got it from here [https://github.com/internetwache/GitTools](https://github.com/internetwache/GitTools) , well we will actually use ./gitdumper
+
+i will explain command line first ./gitdumper.sh(script) and url (our target ) and name folder(the output will store in ) final ⇒ `./gitdumper <target> <name of folder>`
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FUSexR3y7BJMd3CFkBFxv%252Fimage.png%3Falt%3Dmedia%26token%3D7ccd38f1-56f8-400c-b419-b4e6819529f0&width=768&dpr=4&quality=100&sign=3097313e&sv=2)
+
+okay open the folder and type ls -a <-a to appear hidden files>
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FWfOwL9H23EIGAT1rHdeK%252Fimage.png%3Falt%3Dmedia%26token%3D062a6281-2dc2-41c5-bf8a-15b45e42c101&width=768&dpr=4&quality=100&sign=9fb2b868&sv=2)
+
+i already serach on it but i did't find anything (you can search if you want it's up to you), now we try another tool called [_git_](https://www.kali.org/tools/git/) we will use git status to see the changes that have been made for this repository command ⇒ git status
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhXgUvZqkcfg9rTvQ8fu4%252Fimage.png%3Falt%3Dmedia%26token%3Df6be5d82-1967-4e5b-b4e4-f1a7502af333&width=768&dpr=4&quality=100&sign=4a0cb2bb&sv=2)
+
+yeah it's just type git restore flag.php to solve the challenge 😄
+
+![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FPB1K73I8t2froWnX0wRB%252Fimage.png%3Falt%3Dmedia%26token%3Da327fd65-aa8a-43be-80c6-488832397369&width=768&dpr=4&quality=100&sign=3110024&sv=2)
+
+----
+
