@@ -34,6 +34,20 @@
               "icon": "lucide-file",
               "title": "2025-04-24-Web-Security-Cyber-Talents"
             }
+          },
+          {
+            "id": "a652a1f672060804",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-04-24-Web-Security-Cyber-Talents.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-04-24-Web-Security-Cyber-Talents"
+            }
           }
         ],
         "currentTab": 1
@@ -183,10 +197,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "555820d73e5ab58c",
+  "active": "d432491a0e0016c2",
   "lastOpenFiles": [
-    "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
+    "pic/DarkSide",
+    "pic",
+    "pic/DarkSide/2-DarkSide.png",
     "2025-04-24-Web-Security-Cyber-Talents.md",
+    "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
+    "pic/DarkSide/1- DarkSide.png",
     "Pasted image 20250421213838.png"
   ]
 }

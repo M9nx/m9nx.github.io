@@ -969,3 +969,29 @@ for more info about alias ⇒ [https://github.com/yandex/gixy/blob/master/docs/e
 
 ----
 
+# DarkSide
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+
+**description**
+
+Light up the darkness
+
+**Solution**
+
+okay, this lab is too easy it just click f12 to see web sources and found js file called disable open it and get the flag 
+
+![[1- DarkSide.png]]
+
+![[2-DarkSide.png]]
+
+---
