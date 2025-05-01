@@ -939,11 +939,7 @@ Come back home Mr. Bean.
 
 **Solution**
 
-after access the lab we open it browser
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FP5QAS2gpx1aKPBgqGQHt%252FScreenshot%25202025-02-13%2520014943.png%3Falt%3Dmedia%26token%3D1eb4ac98-4344-4817-bea9-ddb97954c33f&width=768&dpr=4&quality=100&sign=649422f9&sv=2)
-
-okay let's go to brute-force directory using **dirsearch**
+after access the lab we open it browser okay let's go to brute-force directory using **dirsearch**
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FNKk12t6SZa4wVaTwnFro%252FScreenshot%25202025-02-13%2520014927.png%3Falt%3Dmedia%26token%3D6ac40940-d982-45f6-aa79-c2a690d13428&width=768&dpr=4&quality=100&sign=4187c7f6&sv=2)
 
@@ -1016,3 +1012,62 @@ Challenge Information
 Creative Thinking will make getting the flag so much easier
 
 **Solution**
+
+well, let's to search about anything so i use my name 'mounir'
+
+![[1-SkiddyKill3r.png]]
+
+here we go u see this result 
+
+![[2-SkiddyKill3r.png]]
+
+now let's review page's source code 
+
+![[3-SkiddyKill3r.png]]
+ 
+ okay i think this is good findings soo let's try to search about 'Momen' 
+
+![[4-SkiddyKill3r.png]]
+
+well found endpoint called 'hint.php' let's what is this 
+
+![[5-SkiddyKill3r.png]]
+
+after moment show this i think we now have param called show and it's have two value true or false let's and see what is happen 
+
+![[11-SkiddyKill3r.png]]
+
+and we found this first i'll explain this code and search for exploit to bypass every function
+
+![[6-SkiddyKill3r.png]]
+
+Going on, at the begining of the source code, there is a commented line , “`// Our Site Have robots.txt Too`”. I decide to visit the page robots.txt and this is what I get.
+
+![[7-SkiddyKill3r.png]]
+
+Unfortunately, visiting the pages **_/flag.php_**, **_/flag1.jpg_**, and **_/robots.txt.php_** shows nothing. Further analysis of the source code in /hint.php, I get a hint on how to bypass the error message that is shown by visiting the page /robots.txt.php . :
+
+“`/*   To Get The Final Flag Try To Search About The Right User-Agent And File ;)   Remember: - The Flag Not Always Exits In What We See   */`”
+
+so, now let's set HTTP_REFERER's value to `http://cyberguy` and see what happen (u can intercept request in burp and update referer header's value or use any browser extension or use curl it's up to u   in my case i'll use browser extension )
+
+![[8-SkiddyKill3r.png]]
+
+and don't forget to set cookies 
+
+![[9-SkiddyKill3r.png]]
+
+and try to access to robots.txt.php
+
+![[10-SkiddyKill3r.png]]
+
+it's doesn't work so after some research i try to modify the referer header from` “http://cyberguy,to “(lab-url/robots.txt.php)”`, and the method from **GET** to PUT
+
+![[12-SkiddyKill3r.png]]
+
+and see we now have value to user-agent header so let's update this value and try to access on /user_check.php
+
+![[13-SkiddyKill3r.png]]
+
+
+----
