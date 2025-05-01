@@ -1015,35 +1015,43 @@ Creative Thinking will make getting the flag so much easier
 
 well, let's to search about anything so i use my name 'mounir'
 
-![[1-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/50ca8bf5-495c-4b21-acc0-831ad54ae8f2)
+
 
 here we go u see this result 
 
-![[2-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/a59f7d17-cb6d-4407-840f-b3a136cbceb6)
+
 
 now let's review page's source code 
 
-![[3-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/e7f50b1a-4f64-4fe2-802c-85f0f141878a)
+
  
  okay i think this is good findings soo let's try to search about 'Momen' 
 
-![[4-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/689f8764-8543-4e54-8fe7-e89046a6ec10)
+
 
 well found endpoint called 'hint.php' let's what is this 
 
-![[5-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/e2156273-0722-416c-9362-f72f7d92a12d)
+
 
 after moment show this i think we now have param called show and it's have two value true or false let's and see what is happen 
 
-![[11-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/fd64c32a-80d7-4fac-a63f-fec08467476b)
+
 
 and we found this first i'll explain this code and search for exploit to bypass every function
 
-![[6-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/220b8217-9857-443c-a855-afca8e3fe05c)
+
 
 Going on, at the begining of the source code, there is a commented line , “`// Our Site Have robots.txt Too`”. I decide to visit the page robots.txt and this is what I get.
 
-![[7-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/a84c529f-362a-4db2-8a29-39af79bb1f24)
+
 
 Unfortunately, visiting the pages **_/flag.php_**, **_/flag1.jpg_**, and **_/robots.txt.php_** shows nothing. Further analysis of the source code in /hint.php, I get a hint on how to bypass the error message that is shown by visiting the page /robots.txt.php . :
 
@@ -1051,23 +1059,26 @@ Unfortunately, visiting the pages **_/flag.php_**, **_/flag1.jpg_**, and **_/
 
 so, now let's set HTTP_REFERER's value to `http://cyberguy` and see what happen (u can intercept request in burp and update referer header's value or use any browser extension or use curl it's up to u   in my case i'll use browser extension )
 
-![[8-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/d38e732a-9286-4857-b192-e701e1edd4ad)
+
 
 and don't forget to set cookies 
 
-![[9-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/57312580-d432-4258-a9f6-f78817cdd21f)
+
 
 and try to access to robots.txt.php
 
-![[10-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/fb3d18d0-9118-4337-85da-3cbe609fb08a)
 
 it's doesn't work so after some research i try to modify the referer header from` “http://cyberguy,to “(lab-url/robots.txt.php)”`, and the method from **GET** to PUT
 
-![[12-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/6decc1c5-c249-4290-b52f-03f313f39101)
+
 
 and see we now have value to user-agent header so let's update this value and try to access on /user_check.php
 
-![[13-SkiddyKill3r.png]]
+![image](https://github.com/user-attachments/assets/a93de560-2628-42ec-a45a-3a473abd73a1)
 
 
 ----
