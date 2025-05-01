@@ -990,8 +990,10 @@ Light up the darkness
 
 okay, this lab is too easy it just click f12 to see web sources and found js file called disable open it and get the flag 
 
-![[1- DarkSide.png]]
+![image](https://github.com/user-attachments/assets/59972944-da53-4d7b-97fc-cccf035bdd93)
 
-![[2-DarkSide.png]]
+
+![image](https://github.com/user-attachments/assets/9adbe38a-4a0c-48a9-a730-d05250cae81e)
+
 
 ---
