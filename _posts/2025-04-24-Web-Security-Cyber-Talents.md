@@ -995,3 +995,22 @@ okay, this lab is too easy it just click f12 to see web sources and found js fil
 ![[2-DarkSide.png]]
 
 ---
+
+# DarkSide
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** easy
+    
+- **Points:** 50
+
+
+
+**description**
+
+Light up the darkness
+
+**Solution**
