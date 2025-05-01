@@ -996,7 +996,7 @@ okay, this lab is too easy it just click f12 to see web sources and found js fil
 ![image](https://github.com/user-attachments/assets/9adbe38a-4a0c-48a9-a730-d05250cae81e)
 
 
----
+----
 
 # SkiddyKill3r
 
