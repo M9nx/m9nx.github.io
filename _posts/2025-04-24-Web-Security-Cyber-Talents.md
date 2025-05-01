@@ -998,7 +998,7 @@ okay, this lab is too easy it just click f12 to see web sources and found js fil
 
 ---
 
-# DarkSide
+# SkiddyKill3r
 
 
 Challenge Information
@@ -1013,6 +1013,6 @@ Challenge Information
 
 **description**
 
-Light up the darkness
+Creative Thinking will make getting the flag so much easier
 
 **Solution**
