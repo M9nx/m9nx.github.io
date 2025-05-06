@@ -83,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://github.com/M9nx/m9nx.github.io/blob/main/assets/download%20(6).jpeg
+avatar: https://raw.githubusercontent.com/M9nx/m9nx.github.io/refs/heads/main/assets/6.jpeg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
