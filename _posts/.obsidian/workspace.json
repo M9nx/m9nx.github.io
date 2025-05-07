@@ -33,8 +33,7 @@
               "title": "4-Sonic go brrr"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,7 +180,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d432491a0e0016c2",
+  "active": "b4caba7ef58f0f99",
   "lastOpenFiles": [
     "pic/Sonic go brrr/3-Sonic go brrr.png",
     "pic/Sonic go brrr/Screenshot 2025-05-07 140659.png",
