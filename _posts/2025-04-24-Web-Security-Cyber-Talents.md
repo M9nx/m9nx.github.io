@@ -634,11 +634,7 @@ Only superpower makes you see unlimited view.
 
 **Solution**
 
-after access the lab we open it browser
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FtmVhCZeC6ESMSxkLo5X2%252Fimage.png%3Falt%3Dmedia%26token%3D43a70b2f-d02a-4c55-b889-2d4d8013e54b&width=768&dpr=4&quality=100&sign=1de8df4b&sv=2)
-
-now we try to review source code (ctrl+u)
+ we review source code (ctrl+u)
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FIc3jmyeunw7s9bJCVeeH%252Fimage.png%3Falt%3Dmedia%26token%3D9035c5a2-ebf5-4ac9-a291-96d80ade99d5&width=768&dpr=4&quality=100&sign=58794032&sv=2)
 
