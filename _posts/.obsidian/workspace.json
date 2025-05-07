@@ -34,21 +34,8 @@
               "icon": "lucide-file",
               "title": "2025-04-24-Web-Security-Cyber-Talents"
             }
-          },
-          {
-            "id": "f91f1958e89ae9f8",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "pic/catchtoka/3-catchtoka.png"
-              },
-              "icon": "lucide-image",
-              "title": "3-catchtoka"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -195,13 +182,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d432491a0e0016c2",
+  "active": "b4caba7ef58f0f99",
   "lastOpenFiles": [
+    "pic/catchtoka/3-catchtoka.png",
     "pic/catchtoka",
     "pic/catchtoka/2-catchtoka.png",
     "pic/catchtoka/1-catchtoka.png",
     "2025-04-24-Web-Security-Cyber-Talents.md",
-    "pic/catchtoka/3-catchtoka.png",
     "pic/remote-CVE/2-remote-CVE.png",
     "pic/remote-CVE",
     "pic/remote-CVE/1-remote-CVE.png",

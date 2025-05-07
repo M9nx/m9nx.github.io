@@ -167,11 +167,7 @@ Flag Format : FLAG{}
 
 **Solution**
 
-after access the lab we open it browser
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fs5cwe1rI1eWcfgKGEsC5%252Fimage.png%3Falt%3Dmedia%26token%3De699de06-c491-4ecb-b2e5-7cc548ec44fb&width=768&dpr=4&quality=100&sign=25e8db31&sv=2)
-
-now we try to review source code (ctrl+u)
+we review source code (ctrl+u)
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FGVm1KFtxODapkT9aOya5%252Fimage.png%3Falt%3Dmedia%26token%3D022b02b0-df9c-475e-9896-8889337d6f5b&width=768&dpr=4&quality=100&sign=15c837cd&sv=2)
 
@@ -339,11 +335,7 @@ the administrator put the backup file in the same root folder as the application
 
 **Solution**
 
-after access the lab we open it
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F1kMaCKwIMh3En8aQhZG5%252Fimage.png%3Falt%3Dmedia%26token%3D418d00ae-ac38-4047-8fc5-dce4f2c2bf2a&width=768&dpr=4&quality=100&sign=30512e8a&sv=2)
-
-now type any valid email and intercepted it in burp and send it to repeater and put the payload (you can search for it ) i will use email ; ls || ,The semicolon (;) will end the statement (line or block of code whatever )to start our commands and the (||) to let the code know the start from (ls) and ignore the dummy mail in the first after typing send the request
+well well  type any valid email and intercepted it in burp and send it to repeater and put the payload (you can search for it ) i will use email ; ls || ,The semicolon (;) will end the statement (line or block of code whatever )to start our commands and the (||) to let the code know the start from (ls) and ignore the dummy mail in the first after typing send the request
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FhJGJwIR1Be8BnPrPDOZD%252Fimage.png%3Falt%3Dmedia%26token%3Debe80395-bc2b-4678-bd03-1d2ecb4ad523&width=768&dpr=4&quality=100&sign=1e15ccc0&sv=2)
 
@@ -517,11 +509,7 @@ I Have a Message for you.
 
 **Solution**
 
-after access the lab
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FbtVR4BrqDUaHOMQnAxDV%252FScreenshot%25202025-02-20%2520164502.png%3Falt%3Dmedia%26token%3De2769184-d5e3-48c7-9c96-b08f0a69693a&width=768&dpr=4&quality=100&sign=49312606&sv=2)
-
-and i already review source and i got no thing
+ i already review source and i got no thing
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fl9n7eI072JQe3Uk9k49j%252Fimage.png%3Falt%3Dmedia%26token%3D84d499d3-05a4-4eb8-87dc-e4b1b7a0597d&width=768&dpr=4&quality=100&sign=f4a2efd8&sv=2)
 
@@ -561,11 +549,7 @@ I Have a Message for you.
 
 **Solution**
 
-after access the lab
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F6dw4JOnhSaJwAvTizPvu%252Fimage.png%3Falt%3Dmedia%26token%3D619b467b-b510-4911-b354-b0a526a9660b&width=768&dpr=4&quality=100&sign=3cee91ce&sv=2)
-
-and if you try to review source code you got this
+well,  if you try to review source code you got this
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252F1YUCMYWbcAnJPpCXZmtI%252Fimage.png%3Falt%3Dmedia%26token%3D788e0e71-c493-4775-b4ae-717ae93432a0&width=768&dpr=4&quality=100&sign=5bb6c9c2&sv=2)
 
