@@ -891,7 +891,7 @@ you should input in src invalid value to make onerror true to get alert and typr
 
 ----
 
-# bean
+### bean
 
 
 Challenge Information
@@ -903,11 +903,11 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Come back home Mr. Bean.
 
-**Solution**
+#### **Solution**
 
 after access the lab we open it browser okay let's go to brute-force directory using **dirsearch**
 
@@ -935,10 +935,10 @@ for more info about alias ⇒ [https://github.com/yandex/gixy/blob/master/docs/e
 
 ----
 
-# DarkSide
+### DarkSide
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -948,11 +948,11 @@ Challenge Information
 
 
 
-**description**
+#### **description**
 
 Light up the darkness
 
-**Solution**
+#### **Solution**
 
 okay, this lab is too easy it just click f12 to see web sources and found js file called disable open it and get the flag 
 
@@ -964,10 +964,10 @@ okay, this lab is too easy it just click f12 to see web sources and found js fil
 
 ----
 
-# SkiddyKill3r
+### SkiddyKill3r
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -977,11 +977,11 @@ Challenge Information
 
 
 
-**description**
+#### **description**
 
 Creative Thinking will make getting the flag so much easier
 
-**Solution**
+#### **Solution**
 
 well, let's to search about anything so i use my name 'mounir'
 
@@ -1053,11 +1053,11 @@ and see we now have value to user-agent header so let's update this value and tr
 
 ----
 
-# remote-CVE
+### remote-CVE
 
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -1066,7 +1066,7 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 What’s CVE ID could be used against the web application in the below target
 
@@ -1074,7 +1074,7 @@ Note: its an unauthenticated RCE vulnerability.
 
 Flag format CVE-xxxx-xxxx
 
-**Solution**
+#### **Solution**
 
 in this lab we'll focus in  description well, after read we now search for CVE so let's review source 
 but after this we saw in footer "Powered by Drupal"
@@ -1100,11 +1100,11 @@ so we now search about cve on Drupal but first we must know what is the version 
 focus on line 16 in meta tags we now know the version is 7 well , the is solve it just search for cve in Mitre (if u don't found it u can look on this link --> [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2018-7600) )
 
 ----
-# catchtoka
+### catchtoka
 
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -1113,11 +1113,11 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Can you catch toka
 
-**Solution**
+#### **Solution**
 
 after access the lab and review source code i found nothing so i try to in intercept requests with burp to see them and i found nothing so after some search plus see lab's  Description
 i then realized the solution is related to change Languages so after see request headers i found "Accept-Language" header so i try to change it to German (it just change the to de and u can see others value in this [site](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) ) and for more info about "Accept-Language"  u can see this [blog](https://mike-diaz006.medium.com/what-i-learned-at-work-this-week-accept-language-http-header-f0574d242cc8) soo after modified it and send request u got the flag in the body of the response 
@@ -1140,11 +1140,11 @@ bye bye
 
 ----
 
-### Sonic go brrr
+#### Sonic go brrr
 
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -1153,11 +1153,11 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Can you beat sonic?
 
-**Solution**
+#### **Solution**
 
 after access the lab u see Apache web server page so i review source code and i found no thing so after see Robots.txt file i found hint tell me to use git soo i realized we'll use [GitTools](https://github.com/internetwache/GitTools) so i used dumber to see git status and what's happen (i mean commits) well , after use dumber i restore file named "index.php" (with this command "`git restore index.php`")
 and after see it i make script to get the flag but first I'll explain the code 
