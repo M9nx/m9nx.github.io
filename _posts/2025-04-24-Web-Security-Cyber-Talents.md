@@ -64,10 +64,10 @@ from support to admin and and click save and reload the page
 ---
 
 
-# This-is-Sparta
+### This-is-Sparta
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -76,17 +76,13 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Morning has broken today they're fighting in the shade when arrows blocked the sun they fell tonight they dine in hell
 
-**Solution**
+#### **Solution**
 
-after access the lab we open it browser
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FUciYOrQV36kPsbzZFdCY%252Fimage.png%3Falt%3Dmedia%26token%3D98655d4c-0f0b-4a5b-810a-a599e3bd61d9&width=768&dpr=4&quality=100&sign=15a7d6eb&sv=2)
-
-now we try to review source code (ctrl+u)
+ we review source code (ctrl+u)
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FmEEUlIBHsbhF9Dl1UlzR%252Fimage.png%3Falt%3Dmedia%26token%3D79cbc212-e788-401b-aa78-91f191b587b0&width=768&dpr=4&quality=100&sign=dc359643&sv=2)
 
