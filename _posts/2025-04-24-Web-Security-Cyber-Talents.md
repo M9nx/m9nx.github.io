@@ -23,7 +23,7 @@ tags:
 
 Administrators only has the power to see the flag , can you be one ?
 
-### Solution
+#### Solution
 
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FxpzY9ClWsf84MvG41Ulk%252FStarting%2520Episode%25204%2520GIF%2520by%2520PBS.gif%3Falt%3Dmedia%26token%3D2e341b03-e130-49bb-956f-80adb9427c08&width=768&dpr=4&quality=100&sign=7d9bce14&sv=2)
@@ -195,7 +195,7 @@ you can submit the flag or login in with this credentials it's up to you 😂
 Webmaster developed a simple script to do cool effects on your name, but his code not filtering the inputs correctly execute JavaScript alert and prove it.
 
 
-### Solution
+#### Solution
 
 after access the lab we open it we try to type any special character like (<,>,(,),etc.) see if there is any filter or not
 
@@ -314,7 +314,7 @@ now we know it's already hashed with MD5 so i'll decrypt it in this [site](https
 
 ---
 
-#### Newsletter
+### Newsletter
 
 #### Challenge Information
 
@@ -329,7 +329,7 @@ now we know it's already hashed with MD5 so i'll decrypt it in this [site](https
 
 the administrator put the backup file in the same root folder as the application, help us download this backup by retrieving the backup file name
 
-### Solution
+#### Solution
 
 well well  type any valid email and intercepted it in burp and send it to repeater and put the payload (you can search for it ) i will use email ; ls || ,The semicolon (;) will end the statement (line or block of code whatever )to start our commands and the (||) to let the code know the start from (ls) and ignore the dummy mail in the first after typing send the request
 
@@ -356,7 +356,7 @@ now send it
 
 Do not Start a fight you can not stop it
 
-### Solution
+#### Solution
 
 we review source code (ctrl+u)
 
@@ -384,10 +384,10 @@ now change the value of cookie to this value and reload site (don't forget save 
 
 ---
 
-# Blue Inc
+### Blue Inc
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -396,11 +396,11 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Blue Inc is a new social media website that's still under construction, However it doesn't have registration yet, but if you are interested in seeing our website then you can login with demo/demo.
 
-**Solution**
+#### **Solution**
 
 after access the lab we open it browser , we login in with credentials we found in lab's description
 
@@ -427,10 +427,10 @@ well, try to your profile to get the flag 😄
 
 ---
 
-# Easy Message
+### Easy Message
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -438,11 +438,11 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 I Have a Message for you.
 
-**Solution**
+#### **Solution**
 
 after access the lab we open it browser , we found sign in page and we don't have any credentials to login so after search i found endpoint called /robots.txt
 
@@ -488,10 +488,10 @@ ohh, this like morse code I'll translate it with this [site](https://morsecodetr
 
 ---
 
-# Cheers
+### Cheers
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -499,11 +499,11 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 I Have a Message for you.
 
-**Solution**
+#### **Solution**
 
  i already review source and i got no thing
 
@@ -528,10 +528,10 @@ and send it
 
 ----
 
-# Back to basics
+### Back to basics
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -539,11 +539,11 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 I Have a Message for you.
 
-**Solution**
+#### **Solution**
 
 well,  if you try to review source code you got this
 
@@ -563,10 +563,10 @@ you got this , now go to and check every request, and you found it ( i mean flag
 
 ---
 
-# Maximum Courage
+### Maximum Courage
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -574,12 +574,12 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 Max prefers to learn by practicing and not just reading all day, so he set up a webserver and hopes it stays secret, can you prove it has a weakness?
 
 
-**Solution**
+#### **Solution**
 
 after access the lab we open it browser
 
@@ -613,10 +613,10 @@ yeah it's just type git restore flag.php to solve the challenge 😄
 
 ----
 
-# Easy access
+### Easy access
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -624,11 +624,11 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 Only superpower makes you see unlimited view.
 
-**Solution**
+#### **Solution**
 
  we review source code (ctrl+u)
 
@@ -656,10 +656,10 @@ well, it's easy one, in common case it's doesn't like this (i mean easy) .
 
 ----
 
-# ConCmarks
+### ConCmarks
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -667,12 +667,12 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 it might be useful to find a mark.
 
 
-**Solution**
+### Solution
 
 after access the lab we inspect main page
 
