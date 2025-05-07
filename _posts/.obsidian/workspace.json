@@ -39,14 +39,12 @@
             "id": "f91f1958e89ae9f8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "2025-04-24-Web-Security-Cyber-Talents.md",
-                "mode": "source",
-                "source": false
+                "file": "pic/catchtoka/3-catchtoka.png"
               },
-              "icon": "lucide-file",
-              "title": "2025-04-24-Web-Security-Cyber-Talents"
+              "icon": "lucide-image",
+              "title": "3-catchtoka"
             }
           }
         ],
@@ -197,12 +195,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f91f1958e89ae9f8",
+  "active": "d432491a0e0016c2",
   "lastOpenFiles": [
+    "pic/catchtoka",
+    "pic/catchtoka/2-catchtoka.png",
+    "pic/catchtoka/1-catchtoka.png",
+    "2025-04-24-Web-Security-Cyber-Talents.md",
+    "pic/catchtoka/3-catchtoka.png",
     "pic/remote-CVE/2-remote-CVE.png",
     "pic/remote-CVE",
     "pic/remote-CVE/1-remote-CVE.png",
-    "2025-04-24-Web-Security-Cyber-Talents.md",
     "Pasted image 20250507122724.png",
     "pic/SkiddyKill3r/7-SkiddyKill3r.png",
     "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
@@ -211,9 +213,6 @@
     "Untitled.md",
     "pic/SkiddyKill3r/6-SkiddyKill3r.png",
     "pic/SkiddyKill3r/5-SkiddyKill3r.png",
-    "pic/SkiddyKill3r/4-SkiddyKill3r.png",
-    "pic/SkiddyKill3r/8-SkiddyKill3r.png",
-    "pic/SkiddyKill3r/9-SkiddyKill3r.png",
     "pic/SkiddyKill3r",
     "pic/DarkSide",
     "pic"

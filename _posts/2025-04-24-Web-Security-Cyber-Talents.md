@@ -1122,3 +1122,39 @@ so we now search about cve on Drupal but first we must know what is the version 
 focus on line 16 in meta tags we now know the version is 7 well , the is solve it just search for cve in Mitre (if u don't found it u can look on this link --> [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2018-7600) )
 
 ----
+# catchtoka
+
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 50
+
+
+**description**
+
+Can you catch toka
+
+**Solution**
+
+after access the lab and review source code i found nothing so i try to in intercept requests with burp to see them and i found nothing so after some search plus see lab's  Description
+i then realized the solution is related to change Languages so after see request headers i found "Accept-Language" header so i try to change it to German (it just change the to de and u can see others value in this [site](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) ) and for more info about "Accept-Language"  u can see this [blog](https://mike-diaz006.medium.com/what-i-learned-at-work-this-week-accept-language-http-header-f0574d242cc8) soo after modified it and send request u got the flag in the body of the response 
+
+from 
+
+![[1-catchtoka.png]]
+To 
+
+![[2-catchtoka.png]]
+
+ then send it and gooot the flag 
+ 
+ ![[3-catchtoka.png]]
+
+bye bye 
+
+----
