@@ -7,7 +7,7 @@ tags:
   - "#Web-Security"
 ---
 
-# Admin has the power
+#Admin-has-the-power
 
 
 Challenge Information
@@ -64,7 +64,7 @@ from support to admin and and click save and reload the page
 ---
 
 
-# This is Sparta
+#This-is-Sparta
 
 
 Challenge Information
@@ -965,7 +965,7 @@ for more info about alias ⇒ [https://github.com/yandex/gixy/blob/master/docs/e
 
 ----
 
-# DarkSide
+#DarkSide
 
 
 Challenge Information
@@ -994,7 +994,7 @@ okay, this lab is too easy it just click f12 to see web sources and found js fil
 
 ----
 
-# SkiddyKill3r
+#SkiddyKill3r
 
 
 Challenge Information
@@ -1082,3 +1082,27 @@ and see we now have value to user-agent header so let's update this value and tr
 
 
 ----
+
+# remote-CVE
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 50
+
+
+**description**
+
+What’s CVE ID could be used against the web application in the below target
+
+Note: its an unauthenticated RCE vulnerability.
+
+Flag format CVE-xxxx-xxxx
+
+**Solution**
+
+after access the
