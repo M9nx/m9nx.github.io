@@ -1533,9 +1533,10 @@ i am just an image viewer ;)
 
 hey hey , let's start i try to input random pic's link to see what's happen and get this 
 
-![[1-v13w3r.png]]
+![image](https://github.com/user-attachments/assets/c2a38cbb-6558-4775-a349-46822e6110b9)
 
-![[2-v13w3r.png]]
+
+![image](https://github.com/user-attachments/assets/42342717-2a17-414e-8850-0ea5e44237e4)
 
 well, i now realized we try to input payload (i already try it lol)  i mean what about put it after regular photo link and i submitted and got the flag payload i used --> +onclick=alert(1) because the link reflect in a tags and + this is space (url-encoded) so it must be look like this 
 
@@ -1543,7 +1544,8 @@ well, i now realized we try to input payload (i already try it lol)  i mean what
  <a href=somethign_here onclick=alert(1) rest_of_the_tag >
 ```
 
-![[3-v13w3r.png]]
+![image](https://github.com/user-attachments/assets/23b52686-f13d-40f8-8c39-b6a7f947a96b)
+
 
 ----
 
