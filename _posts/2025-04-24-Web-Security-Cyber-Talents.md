@@ -1260,11 +1260,11 @@ if (isset($_POST['Q'])) {
 ```
 
 
-Sure! Let's go step by step to explain the code you provided, and then I'll also explain the script I created in detail.
+Let's go step by step to explain the code we found in index.php file, and then I'll also explain the script I created in detail.
 
-### **Explanation of the PHP code**:
+ **Explanation of the PHP code**:
 
-#### HTML Part:
+ HTML Part:
 
 This part defines a simple HTML structure with an SVG graphic for a blur effect (it’s part of the page's design, not directly related to the challenge).
 
@@ -1281,7 +1281,7 @@ This part defines a simple HTML structure with an SVG graphic for a blur effect 
 
 ---
 
-#### PHP Part:
+ PHP Part:
 
 Let’s dive into the PHP part where the logic for the challenge is implemented:
 
@@ -1382,7 +1382,7 @@ if (isset($_POST['Q'])) {
 
 ---
 
-### **Explaining the Python Script**:
+ **Explaining the Python Script**:
 
 Now, let’s break down the Python script I wrote to exploit the challenge:
 
