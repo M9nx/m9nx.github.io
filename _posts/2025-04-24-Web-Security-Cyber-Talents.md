@@ -1103,7 +1103,8 @@ Flag format CVE-xxxx-xxxx
 in this lab we'll focus in  description well, after read we now search for CVE so let's review source 
 but after this we saw in footer "Powered by Drupal"
 
-![[1-remote-CVE.png]]
+![image](https://github.com/user-attachments/assets/3b2f8af1-4112-4635-a31d-1a24e8f9bd85)
+
 
 so what's Drupal ??
 
@@ -1117,7 +1118,8 @@ so what's Drupal ??
 
 so we now search about cve on Drupal but first we must know what is the version of Drupal let's review source code 
 
-![[2-remote-CVE.png]]
+![image](https://github.com/user-attachments/assets/41cea55c-11b6-452b-94bc-e45bf7822a8d)
+
 
 focus on line 16 in meta tags we now know the version is 7 well , the is solve it just search for cve in Mitre (if u don't found it u can look on this link --> [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2018-7600) )
 
