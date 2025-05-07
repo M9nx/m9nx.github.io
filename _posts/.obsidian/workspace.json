@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d28658e55b59c409",
@@ -184,6 +185,11 @@
   },
   "active": "b4caba7ef58f0f99",
   "lastOpenFiles": [
+    "Pasted image 20250507141615.png",
+    "Pasted image 20250507141606.png",
+    "Pasted image 20250507140700.png",
+    "Pasted image 20250507140617.png",
+    "Pasted image 20250507140541.png",
     "pic/catchtoka/3-catchtoka.png",
     "pic/catchtoka",
     "pic/catchtoka/2-catchtoka.png",
@@ -193,13 +199,9 @@
     "pic/remote-CVE",
     "pic/remote-CVE/1-remote-CVE.png",
     "Pasted image 20250507122724.png",
-    "pic/SkiddyKill3r/7-SkiddyKill3r.png",
     "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
     "CVE.md",
-    "pic/SkiddyKill3r/13-SkiddyKill3r.png",
     "Untitled.md",
-    "pic/SkiddyKill3r/6-SkiddyKill3r.png",
-    "pic/SkiddyKill3r/5-SkiddyKill3r.png",
     "pic/SkiddyKill3r",
     "pic/DarkSide",
     "pic"

