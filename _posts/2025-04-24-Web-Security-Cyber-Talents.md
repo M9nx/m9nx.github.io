@@ -144,10 +144,10 @@ after submit you see this pop-up
 
 ---
 
-# I am Legend
+### I am Legend
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -155,13 +155,13 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 If I am a legend, then why am I so lonely?
 
 Flag Format : FLAG{}
 
-**Solution**
+#### **Solution**
 
 we review source code (ctrl+u)
 
@@ -179,7 +179,7 @@ you can submit the flag or login in with this credentials it's up to you 😂
 
 ---
 
-# Cool Name Effect
+### Cool Name Effect
 
 
 Challenge Information
