@@ -1512,3 +1512,39 @@ Well, after u run the script u got output like this and  it's contain the flag :
 
 
 ---
+
+### v13w3r
+
+
+#### Challenge Information
+
+- **Category:** Web Security
+    
+- **Level:** medium
+    
+- **Points:** 50
+
+
+#### **description**
+
+i am just an image viewer ;)
+
+#### **Solution**
+
+hey hey , let's start i try to input random pic's link to see what's happen and get this 
+
+![[Pasted image 20250507233101.png]]
+
+![[Pasted image 20250507233137.png]]
+
+well, i now realized we try to input payload (i already try it lol)  i mean what about put it after regular photo link and i submitted and got the flag payload i used --> +onclick=alert(1) because the link reflect in a tags and + this is space (url-encoded) so it must be look like this 
+
+```html
+ <a href=somethign_here onclick=alert(1) rest_of_the_tag >
+```
+
+![[Pasted image 20250507233615.png]]
+
+----
+
+
