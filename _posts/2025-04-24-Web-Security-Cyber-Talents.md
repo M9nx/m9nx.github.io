@@ -1132,14 +1132,17 @@ i then realized the solution is related to change Languages so after see request
 
 from 
 
-![[1-catchtoka.png]]
+![image](https://github.com/user-attachments/assets/b52635d5-f3c5-4700-985d-2ed02cecb429)
+
 To 
 
-![[2-catchtoka.png]]
+![image](https://github.com/user-attachments/assets/a43ab452-6eed-4416-a0ad-4c91233c6056)
+
 
  then send it and gooot the flag 
  
- ![[3-catchtoka.png]]
+![image](https://github.com/user-attachments/assets/ed141fa2-2819-4d60-a3c3-de34cf388148)
+
 
 bye bye 
 
