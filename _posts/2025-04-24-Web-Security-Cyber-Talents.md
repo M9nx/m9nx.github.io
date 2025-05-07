@@ -1162,15 +1162,18 @@ Can you beat sonic?
 after access the lab u see Apache web server page so i review source code and i found no thing so after see Robots.txt file i found hint tell me to use git soo i realized we'll use [GitTools](https://github.com/internetwache/GitTools) so i used dumber to see git status and what's happen (i mean commits) well , after use dumber i restore file named "index.php" (with this command "`git restore index.php`")
 and after see it i make script to get the flag but first I'll explain the code 
 
-![[1-Sonic go brrr.png]]
+![image](https://github.com/user-attachments/assets/242c16d0-5b84-4c84-af81-cff1dc052f6e)
+
 
 then type "git status " 
 
-![[2-Sonic go brrr.png]]
+![image](https://github.com/user-attachments/assets/19a42628-e5b7-4f8e-83b7-25aca3840874)
+
 
 now type " git restore index.php" to restore this file 
 
-![[3-Sonic go brrr.png]]
+![image](https://github.com/user-attachments/assets/fb58789c-58b4-4840-a0f3-be6488c0fb03)
+
 
 and this is the index.php file 
 
@@ -1505,6 +1508,7 @@ print("[+] Response Text:\n", r2.text)
 
 Well, after u run the script u got output like this and  it's contain the flag :
 
-![[4-Sonic go brrr.png]]
+![image](https://github.com/user-attachments/assets/872df587-70c5-4f9d-a0d5-02ad80aec683)
+
 
 ---
