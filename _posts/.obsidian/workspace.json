@@ -27,13 +27,14 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "pic/Sonic go brrr/4-Sonic go brrr.png"
+                "file": "pic/Sonic go brrr/3-Sonic go brrr.png"
               },
               "icon": "lucide-image",
-              "title": "4-Sonic go brrr"
+              "title": "3-Sonic go brrr"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d28658e55b59c409",
@@ -181,13 +181,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b4caba7ef58f0f99",
+  "active": "d432491a0e0016c2",
   "lastOpenFiles": [
     "pic/Sonic go brrr/4-Sonic go brrr.png",
+    "2025-04-24-Web-Security-Cyber-Talents.md",
     "pic/Sonic go brrr",
     "Pasted image 20250507141606.png",
     "pic/Sonic go brrr/3-Sonic go brrr.png",
-    "2025-04-24-Web-Security-Cyber-Talents.md",
     "pic/Sonic go brrr/2-Sonic go brrr.png",
     "pic/Sonic go brrr/1-Sonic go brrr.png",
     "pic/catchtoka/3-catchtoka.png",
