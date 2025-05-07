@@ -7,7 +7,7 @@ tags:
   - "#Web-Security"
 ---
 
-#Admin-has-the-power
+# Admin-has-the-power
 
 
 Challenge Information
@@ -64,7 +64,7 @@ from support to admin and and click save and reload the page
 ---
 
 
-#This-is-Sparta
+# This-is-Sparta
 
 
 Challenge Information
@@ -370,13 +370,7 @@ Do not Start a fight you can not stop it
 
 **Solution**
 
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FrEbduYulejaS3h6IAsXz%252FDwight%2520Office%2520Tv%2520GIF%2520by%2520The%2520Office.gif%3Falt%3Dmedia%26token%3D8832d71f-8fac-4c36-871f-7bfcbd445680&width=768&dpr=4&quality=100&sign=a458dd82&sv=2)
-
-after access the lab we open it browser
-
-![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fz6jDDOwQ3hccO5q6Qi6j%252Fimage.png%3Falt%3Dmedia%26token%3D1def694b-248d-487a-a2c4-a18ff76a05b6&width=768&dpr=4&quality=100&sign=f2ddefb7&sv=2)
-
-now we try to review source code (ctrl+u)
+we review source code (ctrl+u)
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252Fz5wCyxGgqpaKbqLMLWUO%252Fimage.png%3Falt%3Dmedia%26token%3D3997e5e2-f77f-4ba8-b802-06cb6ef4f503&width=768&dpr=4&quality=100&sign=f0bd81d6&sv=2)
 
@@ -965,7 +959,7 @@ for more info about alias ⇒ [https://github.com/yandex/gixy/blob/master/docs/e
 
 ----
 
-#DarkSide
+# DarkSide
 
 
 Challenge Information
@@ -994,7 +988,7 @@ okay, this lab is too easy it just click f12 to see web sources and found js fil
 
 ----
 
-#SkiddyKill3r
+# SkiddyKill3r
 
 
 Challenge Information
@@ -1083,7 +1077,8 @@ and see we now have value to user-agent header so let's update this value and tr
 
 ----
 
-#remote-CVE
+# remote-CVE
+
 
 
 Challenge Information
@@ -1108,7 +1103,7 @@ Flag format CVE-xxxx-xxxx
 in this lab we'll focus in  description well, after read we now search for CVE so let's review source 
 but after this we saw in footer "Powered by Drupal"
 
-![[Pasted image 20250507122055.png]]
+![[1-remote-CVE.png]]
 
 so what's Drupal ??
 
@@ -1122,7 +1117,7 @@ so what's Drupal ??
 
 so we now search about cve on Drupal but first we must know what is the version of Drupal let's review source code 
 
-![[Pasted image 20250507122514.png]]
+![[2-remote-CVE.png]]
 
 focus on line 16 in meta tags we now know the version is 7 well , the is solve it just search for cve in Mitre (if u don't found it u can look on this link --> [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2018-7600) )
 
