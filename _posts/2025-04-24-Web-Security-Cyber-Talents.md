@@ -1083,7 +1083,7 @@ and see we now have value to user-agent header so let's update this value and tr
 
 ----
 
-# remote-CVE
+#remote-CVE
 
 
 Challenge Information
@@ -1105,4 +1105,25 @@ Flag format CVE-xxxx-xxxx
 
 **Solution**
 
-after access the
+in this lab we'll focus in  description well, after read we now search for CVE so let's review source 
+but after this we saw in footer "Powered by Drupal"
+
+![[Pasted image 20250507122055.png]]
+
+so what's Drupal ??
+
+- **Drupal** is a free, open-source CMS written in PHP.
+    
+- It’s used to build and manage websites — from personal blogs to government portals and enterprise platforms.
+    
+- Known for its flexibility, scalability, and strong security.
+    
+- Offers thousands of **modules** (plugins) and **themes** to extend functionality and design.
+
+so we now search about cve on Drupal but first we must know what is the version of Drupal let's review source code 
+
+![[Pasted image 20250507122514.png]]
+
+focus on line 16 in meta tags we now know the version is 7 well , the is solve it just search for cve in Mitre (if u don't found it u can look on this link --> [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2018-7600) )
+
+----
