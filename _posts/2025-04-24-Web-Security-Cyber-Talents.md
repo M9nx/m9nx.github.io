@@ -249,10 +249,10 @@ and you will get output (this is flag )
 
 ---
 
-# Encrypted Database
+### Encrypted Database
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -261,12 +261,12 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 The company hired an inexperienced developer, but he told them he hided the database and have it encrypted so the website is totally secure, can you prove that he is wrong ??
 
 
-**Solution**
+#### **Solution**
 
 **well, after we access the lab we try to find any input field to inject it but i didn't found anu input field**
 
@@ -314,9 +314,9 @@ now we know it's already hashed with MD5 so i'll decrypt it in this [site](https
 
 ---
 
-# Newsletter
+#### Newsletter
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -325,11 +325,11 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 the administrator put the backup file in the same root folder as the application, help us download this backup by retrieving the backup file name
 
-**Solution**
+### Solution
 
 well well  type any valid email and intercepted it in burp and send it to repeater and put the payload (you can search for it ) i will use email ; ls || ,The semicolon (;) will end the statement (line or block of code whatever )to start our commands and the (||) to let the code know the start from (ls) and ignore the dummy mail in the first after typing send the request
 
@@ -341,9 +341,9 @@ now send it
 
 ---
 
-# who am i?
+### who am i?
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -352,11 +352,11 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Do not Start a fight you can not stop it
 
-**Solution**
+### Solution
 
 we review source code (ctrl+u)
 
