@@ -672,7 +672,7 @@ well, it's easy one, in common case it's doesn't like this (i mean easy) .
 it might be useful to find a mark.
 
 
-### Solution
+#### Solution
 
 after access the lab we inspect main page
 
@@ -717,10 +717,10 @@ this means we need two **different** inputs that produce the same MD5 hash when 
 
 ---
 
-# Private Agent
+### Private Agent
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -729,12 +729,12 @@ Challenge Information
 - **Points:** 50
 
 
-**description**
+#### **description**
 
 Only private agents can make their way to the gate.
 
 
-**Solution**
+#### **Solution**
 
 after access the lab we inspect main page
 
@@ -752,10 +752,10 @@ and we found flag as header in response
 
 ----
 
-# COMRADE III
+### COMRADE III
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -763,12 +763,12 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 Hey Comrade , World War III will begin soon , we need to reveal what was hidden.
 
 
-**Solution**
+#### **Solution**
 
 after access the lab we review source code
 
@@ -806,10 +806,10 @@ okay we got value (first remove spaces ) and go to lab and create cookie called 
 
 ----
 
-# x corp
+### x corp
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -817,11 +817,11 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 X corp made a new filtration for input data , prove it is secure enough
 
-**Solution**
+#### **Solution**
 
 after access the lab we review source code
 
@@ -843,10 +843,10 @@ well , now try to input payload to make alert (XSS) u can use this payload `admi
 
 ----
 
-# uGame
+### uGame
 
 
-Challenge Information
+#### Challenge Information
 
 - **Category:** Web Security
     
@@ -854,11 +854,11 @@ Challenge Information
     
 - **Points:** 50
 
-**description**
+#### **description**
 
 we are creating a new social media app for gaming , make sure its secure enough.
 
-**Solution**
+#### **Solution**
 
 after access the lab u see input text i try to input any value to see where it's stored in source code
 
