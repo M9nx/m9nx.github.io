@@ -4,8 +4,6 @@ date: 2025-04-24 07:40:00 +0200
 categories: [Web Security]
 tags: [Web-Security]
 ![Some caption](/assets/img/pic1.jpeg)
-#img_path: /assets/img/
-#image: pic1.jpeg
 ---
 
 
