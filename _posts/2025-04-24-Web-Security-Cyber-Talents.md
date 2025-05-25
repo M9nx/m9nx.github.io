@@ -1,11 +1,12 @@
 ---
-published: true
 title: Web Security
 date: 2025-04-24 07:40:00 +0200
-categories: cybertalents
-tags:
-  - "#Web-Security"
+categories: [Web Security]
+tags: [Web-Security]
+img_path: /assets/img/
+image: pic1.jpeg
 ---
+
 
 ### Admin-has-the-power
 
