@@ -3,7 +3,8 @@ published: true
 title: Introduction To Cybersecurity In-Cyber Talents
 date: 2025-03-28 07:40:00 +0200
 categories: cybertalents
-tags: Intro-To-Sec
+tags:
+  - Intro-To-Sec
 ---
 
 
