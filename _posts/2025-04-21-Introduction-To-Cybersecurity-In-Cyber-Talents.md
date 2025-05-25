@@ -1,5 +1,5 @@
 ---
-title: Introduction To Cybersecurity In-Cyber Talents
+title:  Walkthrough For Introduction To Cybersecurity Path In Cyber Talents
 date:  2025-03-28 07:40:00 +0200
 categories: [cybertalents]
 tags: [Intro-To-Sec,cybertalents]
