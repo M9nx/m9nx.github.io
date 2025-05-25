@@ -6,7 +6,6 @@ tags: [Web-Security]
 ![Some caption](/assets/img/pic1.jpeg)
 #img_path: /assets/img/
 #image: pic1.jpeg
-
 ---
 
 
