@@ -3,7 +3,7 @@ title: Introduction To Cybersecurity In-Cyber Talents
 date:  2025-03-28 07:40:00 +0200
 categories: [cybertalents]
 tags: [- Intro-To-Sec
-- cybertalents]
+cybertalents]
 img_path: ""  # leave blank
 image: "https://raw.githubusercontent.com/M9nx/m9nx.github.io/main/assets/img/pic1.jpeg"
 ---
