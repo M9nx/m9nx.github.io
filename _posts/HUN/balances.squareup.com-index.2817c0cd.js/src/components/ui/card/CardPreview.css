@@ -1,0 +1,47 @@
+.preview {
+  box-shadow: 0 32px 13px rgb(0 0 0 / 1%), 0 18px 11px rgb(0 0 0 / 4%), 0 8px 8px rgb(0 0 0 / 7%),
+    0 2px 4px rgb(0 0 0 / 8%), 0 0 0 rgb(0 0 0 / 8%);
+
+  /* This class is the container for the svg and provides the drop shadow.
+   * Without the border radius, the drop shadow will not wrap around the
+   * card svg. The values fo the border radius are top bottom radius is 2.38%
+   * and right-left radius is 3.84%.
+   *
+   * The calculation for these value is as followed:
+   * The svg for the card preview is height 208, width 335.
+   * The border radius in the svg is 8px.
+   * border-radius: calc(8px / 335) / calc(8px / 208)
+   */
+  border-radius: 2.38% / 3.84%;
+  width: 100%;
+  height: auto;
+}
+
+.previewContainer {
+  display: grid;
+  width: 100%;
+}
+
+.previewFront,
+.previewBack {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: 0.3s ease-in-out;
+}
+
+.previewFront {
+  grid-area: 1 / 1;
+
+  .previewContainerRotate & {
+    transform: rotateY(180deg);
+  }
+}
+
+.previewBack {
+  grid-area: 1 / 1;
+  transform: rotateY(-180deg);
+
+  .previewContainerRotate & {
+    transform: rotateY(0deg);
+  }
+}

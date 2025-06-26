@@ -1,0 +1,76 @@
+.progressContainer {
+  display: grid;
+  height: 16px;
+  grid-template-columns: minmax(0, max-content) repeat(auto-fit, minmax(0, 1fr));
+  margin-bottom: var(--core-metrics-spacing-100);
+}
+
+.progressSegment {
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconEmphasis {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--core-emphasis-40-color);
+}
+
+.icon {
+  background: var(--core-emphasis-40-color);
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  z-index: 1; /* This z-index is for the icon to appear above the icon emphasis */
+}
+
+.iconCurrent {
+  background: var(--core-emphasis-fill-color);
+}
+
+.progressBar {
+  height: 2px;
+  background: var(--core-emphasis-40-color);
+  width: 100%;
+}
+
+.progressBarCompleted {
+  background: var(--core-emphasis-fill-color);
+}
+
+.labelContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 2fr));
+}
+
+.label {
+  margin: 0;
+  color: var(--core-fill-30-color);
+  grid-column: span 2;
+  text-align: center;
+}
+
+.label:first-child,
+.label:last-child {
+  grid-column: span 1;
+}
+
+.label:first-child {
+  text-align: left;
+}
+
+.label:last-child {
+  text-align: right;
+}
+
+.labelCompleted {
+  color: var(--core-emphasis-fill-color);
+}

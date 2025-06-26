@@ -1,0 +1,7 @@
+.content {
+  overflow: scroll;
+}
+
+.navIcon path {
+  fill: var(--icon-button-normal-state-icon-color);
+}

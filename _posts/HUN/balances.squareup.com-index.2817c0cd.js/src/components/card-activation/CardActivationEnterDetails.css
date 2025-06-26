@@ -1,0 +1,20 @@
+.main {
+  & p {
+    margin: 0;
+  }
+}
+
+.button {
+  width: 100%;
+  margin-bottom: var(--core-metrics-spacing-50);
+}
+
+.inputFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--core-metrics-spacing-200);
+}
+
+.inputFieldsContainer {
+  margin: var(--core-metrics-spacing-400) 0;
+}

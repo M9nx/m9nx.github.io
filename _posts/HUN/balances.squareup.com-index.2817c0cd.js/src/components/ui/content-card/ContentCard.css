@@ -1,0 +1,13 @@
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .contentCard {
+    display: block;
+    border-radius: var(--content-card-border-radius);
+    background-color: var(--content-card-background-color);
+    border: var(--content-card-border-width) solid var(--core-fill-30-color, rgb(0 0 0 / 5%));
+    padding: var(--core-metrics-spacing-300) var(--core-metrics-spacing-400);
+  }
+}

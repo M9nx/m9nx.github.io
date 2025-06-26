@@ -1,0 +1,39 @@
+@import "/src/styles/index.css";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - var(--app-nav-bar-height));
+  height: 100%;
+  padding: 0 var(--core-metrics-spacing-200);
+  position: relative;
+  z-index: 0;
+}
+
+.header {
+  margin-top: var(--core-metrics-spacing-300);
+  width: 100%;
+}
+
+.content {
+  max-width: 600px;
+  width: 100%;
+  padding: var(--core-metrics-spacing-300) 0;
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .header {
+    margin-top: var(--core-metrics-spacing-200);
+    margin-bottom: var(--core-metrics-spacing-100);
+    max-width: 1040px;
+  }
+
+  .page {
+    padding: 0 var(--core-metrics-spacing-300);
+  }
+}

@@ -1,0 +1,29 @@
+.cardImageContainer {
+  display: flex;
+  align-items: center;
+  margin-right: calc(var(--core-metrics-spacing-200) - var(--row-horizontal-spacing));
+  width: 99px;
+  height: 62px;
+}
+
+.cardImage {
+  box-shadow: 0 1.1731px 4.6923px rgb(0 0 0 / 5%), 0 2.3462px 7.0385px rgb(0 0 0 / 5%);
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  padding: var(--core-metrics-spacing-100) 0;
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .rowContainer {
+    background: var(--core-surface-10-color);
+    border-radius: 16px;
+    padding: var(--core-metrics-spacing-100) var(--core-metrics-spacing-300);
+  }
+}

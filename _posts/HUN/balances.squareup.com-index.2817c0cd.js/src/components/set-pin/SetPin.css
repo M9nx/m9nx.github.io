@@ -1,0 +1,45 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--core-metrics-spacing-200);
+  grid-auto-rows: min-content;
+  grid-template-areas:
+    "description"
+    "."
+    "inputs"
+    "error"
+    "market-button";
+
+  & p {
+    grid-area: description;
+    margin: 0;
+  }
+}
+
+.form {
+  grid-area: inputs;
+  display: grid;
+  row-gap: var(--core-metrics-spacing-200);
+  grid-template-rows: auto 1fr;
+}
+
+.error {
+  grid-area: error;
+  display: flex;
+  align-items: center;
+  column-gap: var(--core-metrics-spacing-50);
+  color: var(--field-error-message-text-color);
+
+  & svg {
+    height: var(--core-type-paragraph-30-leading);
+
+    & path {
+      fill: var(--field-error-message-text-color);
+    }
+  }
+}
+
+.button {
+  grid-area: market-button;
+  margin-bottom: var(--core-metrics-spacing-50);
+}

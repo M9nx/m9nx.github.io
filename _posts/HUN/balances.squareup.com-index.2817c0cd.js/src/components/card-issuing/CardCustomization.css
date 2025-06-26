@@ -1,0 +1,52 @@
+.cardPreview {
+  width: 327px;
+}
+
+.cardPreviewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--core-metrics-spacing-100);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--core-metrics-spacing-300);
+}
+
+.loadingIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill {
+  margin-left: var(--core-metrics-spacing-100);
+}
+
+.signatureContent {
+  display: grid;
+  row-gap: var(--core-metrics-spacing-300);
+}
+
+.signaturePreview {
+  font-size: 32px;
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .cardPreviewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background: var(--core-fill-50-color);
+    box-shadow: 0 0 1px rgb(0 0 0 / 1%);
+    border-radius: 6px;
+  }
+}

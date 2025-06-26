@@ -1,0 +1,46 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--core-metrics-spacing-300);
+}
+
+.preview > :nth-child(2) {
+  margin-top: var(--core-metrics-spacing-300);
+}
+
+.previewContainerWithSecondary {
+  padding-bottom: var(--core-metrics-spacing-300);
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .container {
+    display: block;
+    border-radius: var(--content-card-border-radius);
+    background-color: var(--content-card-background-color);
+    border: var(--content-card-border-width) solid var(--core-fill-30-color, rgb(0 0 0 / 5%));
+  }
+
+  .listContainer {
+    padding: var(--core-metrics-spacing-300) var(--core-metrics-spacing-400);
+  }
+
+  .preview {
+    width: 327px;
+    margin: 0;
+  }
+
+  .previewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--core-fill-50-color);
+    padding: var(--core-metrics-spacing-400) var(--core-metrics-spacing-400);
+  }
+}

@@ -1,0 +1,48 @@
+.cardDetailsButton {
+  margin: var(--core-metrics-spacing-400) 0 0;
+  width: 100%;
+}
+
+.iconContainer {
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  > svg path {
+    fill: var(--core-blue-text-color);
+  }
+}
+
+.statusTrackerContainer {
+  padding: var(--core-metrics-spacing-300) 0;
+}
+
+.statusTrackerContainer > p {
+  margin: 0;
+}
+
+.statusTrackerContainer > h3 {
+  margin: 0 0 var(--core-metrics-spacing-300);
+}
+
+.statusTrackerContainer > p:last-of-type {
+  margin-bottom: var(--core-metrics-spacing-300);
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .cardDetailsButton {
+    margin: var(--core-metrics-spacing-400) 0 var(--core-metrics-spacing-100);
+    width: 100%;
+  }
+
+  .statusTrackerContainer {
+    margin: auto;
+    max-width: 327px;
+  }
+}

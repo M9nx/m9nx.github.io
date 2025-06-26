@@ -1,0 +1,7 @@
+.mobileAction {
+  display: block;
+
+  & p {
+    margin: 0;
+  }
+}

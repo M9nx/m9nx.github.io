@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--core-metrics-spacing-400);
+}
+
+.header {
+  margin: var(--core-metrics-spacing-300) 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .subtitle,
+  & .subtext {
+    margin: 0;
+  }
+
+  & .subtext {
+    color: var(--core-text-20-color);
+  }
+}
+
+.button {
+  width: 100%;
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .button {
+    width: 244px;
+  }
+}

@@ -1,0 +1,31 @@
+.backButton {
+  color: var(--core-text-10-color);
+}
+
+.backButtonIcon svg path {
+  stroke: var(--core-text-10-color);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 48px auto 48px;
+  align-items: center;
+  width: 100%;
+}
+
+.headerTitle {
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  /* Needed to center icon. For some reason when text is added to button, icon not centered */
+  .backButtonIcon {
+    display: flex;
+  }
+}

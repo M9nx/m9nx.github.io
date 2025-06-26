@@ -1,0 +1,9 @@
+.description {
+  margin: 0 0 var(--core-metrics-spacing-400);
+}
+
+.inputFields {
+  display: grid;
+  row-gap: var(--core-metrics-spacing-200);
+  margin-bottom: var(--core-metrics-spacing-400);
+}

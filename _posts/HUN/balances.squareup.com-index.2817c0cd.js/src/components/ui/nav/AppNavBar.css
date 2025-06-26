@@ -1,0 +1,44 @@
+@import "/src/styles/index.css";
+
+.navTopOffset {
+  height: var(--app-nav-bar-height);
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: var(--app-nav-bar-height);
+}
+
+.help {
+  display: flex;
+  align-items: center;
+}
+
+.icon path {
+  fill: var(--core-fill-10-color);
+}
+
+.navContent {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  /* TODO(cvu): Decide if this should be a css var once you figure out how you wanna handle app css vars */
+  height: var(--app-nav-bar-height);
+  padding: 0 var(--core-metrics-spacing-200);
+  background: var(--core-surface-10-color);
+  box-shadow: 0 1px 2px var(--core-fill-30-light-mode-color),
+    0 0 4px var(--core-fill-30-light-mode-color);
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: var(--core-metrics-spacing-300);
+}

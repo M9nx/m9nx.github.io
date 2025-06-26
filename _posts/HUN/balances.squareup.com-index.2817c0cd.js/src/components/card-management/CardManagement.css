@@ -1,0 +1,30 @@
+.button {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.helpHeader {
+  margin: 0 0 var(--core-metrics-spacing-100);
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .button {
+    width: initial;
+  }
+
+  .container {
+    row-gap: var(--core-metrics-spacing-300);
+  }
+
+  .divider {
+    display: none;
+  }
+}

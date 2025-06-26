@@ -1,0 +1,54 @@
+.desktopCardLists {
+  display: block;
+
+  & > :not(:last-child) {
+    margin-bottom: var(--core-metrics-spacing-200);
+  }
+}
+
+.emptyState {
+  display: grid;
+  background: var(--core-fill-white-color);
+  color: var(--core-text-20-color);
+  padding: 64px;
+  border-radius: 6px;
+
+  & .iconContainer {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+
+    & .icon {
+      height: 38px;
+      width: 38px;
+
+      & path {
+        fill: var(--core-fill-30-color);
+      }
+    }
+  }
+
+  > p {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+.header {
+  margin: var(--core-metrics-spacing-150) 0 var(--core-metrics-spacing-300);
+}
+
+/*
+ * css var are not supported in media queries
+ * --core-horizontal-size-class-regular-threshold: 600px
+ */
+@media screen and (min-width: 600px) {
+  .header {
+    margin: var(--core-metrics-spacing-500) 0 var(--core-metrics-spacing-300);
+  }
+
+  .page {
+    background: linear-gradient(180deg, var(--core-surface-10-color) 5%, var(--core-fill-50-color)),
+      var(--core-fill-50-color);
+  }
+}
