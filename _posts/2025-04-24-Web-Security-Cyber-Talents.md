@@ -50,7 +50,7 @@ user:support
 password:x34245323 
 ```
 
-after login with this credentials
+after login with this credentials.
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FFyRqkTaXfEFri1gbLTYN%252Fimage.png%3Falt%3Dmedia%26token%3D73bd0ae9-e707-4283-9984-29d451d83e70&width=768&dpr=4&quality=100&sign=ae2681de&sv=2)
 
