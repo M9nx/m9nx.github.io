@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "a98d5e1307924eab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-04-24-Attacktive Directory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-04-24-Attacktive Directory"
+            }
+          },
+          {
             "id": "555820d73e5ab58c",
             "type": "leaf",
             "state": {
@@ -33,7 +47,8 @@
               "title": "3-v13w3r"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,10 +196,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b4caba7ef58f0f99",
+  "active": "a98d5e1307924eab",
   "lastOpenFiles": [
-    "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
     "2025-04-24-Web-Security-Cyber-Talents.md",
+    "2025-04-24-Attacktive Directory.md",
+    "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/@squareup/cdp/node_modules/uuid/dist/esm-browser/v4.js",
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/i18next-browser-languagedetector/node_modules/@babel/runtime/helpers/esm/createClass.js",
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/i18next-browser-languagedetector/node_modules/@babel/runtime/helpers/esm/classCallCheck.js",
@@ -205,7 +221,6 @@
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/alert-exclaimation-circle.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/action-message.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/action-lock-on.svg",
-    "CVE.md",
-    "Untitled.md"
+    "CVE.md"
   ]
 }
