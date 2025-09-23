@@ -172,6 +172,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -180,8 +181,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d432491a0e0016c2",
+  "active": "b4caba7ef58f0f99",
   "lastOpenFiles": [
+    "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
+    "2025-04-24-Web-Security-Cyber-Talents.md",
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/@squareup/cdp/node_modules/uuid/dist/esm-browser/v4.js",
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/i18next-browser-languagedetector/node_modules/@babel/runtime/helpers/esm/createClass.js",
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/i18next-browser-languagedetector/node_modules/@babel/runtime/helpers/esm/classCallCheck.js",
@@ -192,7 +195,6 @@
     "HUN/balances.squareup.com-index.2817c0cd/node_modules/@squareup/cdp/node_modules/uuid/dist/esm-browser/regex.js",
     "HUN/balances.squareup.com-index.2817c0cd/src/protos/squareup/bbfrontend/bankingweb/v1/service.js",
     "HUN/balances.squareup.com-index.2817c0cd/src/protos/squareup/bbfrontend/bankingweb/v1/person_profile_service.js",
-    "HUN/balances.squareup.com-index.2817c0cd/src/protos/squareup/bbfrontend/bankingweb/v1/model.js",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/finance-card-swipe.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/arrow-left.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/arrow-dual-rotating-arrows.svg",
@@ -203,8 +205,6 @@
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/alert-exclaimation-circle.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/action-message.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/action-lock-on.svg",
-    "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
-    "2025-04-24-Web-Security-Cyber-Talents.md",
     "CVE.md",
     "Untitled.md"
   ]
