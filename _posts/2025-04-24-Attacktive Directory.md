@@ -123,7 +123,8 @@ enum4linux <Machine-ip>
 
 So we got big output but we focus on `NetBIOS Domain Name`  
 
-![[Pasted image 20250923113005.png]]
+<img width="1895" height="845" alt="image" src="https://github.com/user-attachments/assets/fad57df5-735f-4b6f-8437-57959d10c9e5" />
+
 
 ### What invalid TLD do people commonly use for their Active Directory Domain?
 
@@ -145,7 +146,8 @@ So `.local` is often miss-used as a .TLD (Top Level Domain)
 
 First we will enumerate with this lists 
 
-![[Pasted image 20250923114002.png]]
+<img width="2030" height="623" alt="image" src="https://github.com/user-attachments/assets/8e976e3d-1386-470f-ba8a-d6ef5a539cb3" />
+
 
 
 ## How to enumerate valid users with `kerbrute`?
