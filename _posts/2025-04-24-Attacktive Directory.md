@@ -10,20 +10,22 @@ img_path: ""
 image: https://tryhackme-images.s3.amazonaws.com/room-icons/f38b047a2a7089147766099dffeb8a5d.png
 ---
 
-# Intro
+
+
+# Intro 
 
 99% of Corporate networks run off Active Directory. From this machine you will have a basic understanding on how to exploit such an environment.
 
-## Learning Objectives:
+### Learning Objectives
 
 - AD Enumeration
 - Kerberos
 - Cracking Hashes
 - Impacket
-## [Challenge](https://tryhackme.com/room/attacktivedirectory)
+### [Challenge](https://tryhackme.com/room/attacktivedirectory)
 
 
-## Tools
+### Tools
 
 - [HashCat](https://hashcat.net/hashcat/)  
 - [Impacket](https://github.com/SecureAuthCorp/impacket)  
@@ -137,4 +139,63 @@ AS we see in `namp` output we notes that Domain Name being `spookysec.local`
 
 So `.local` is often miss-used as a .TLD (Top Level Domain)
 
+
+
+# Enumerating Users via Kerberos
+
+First we will enumerate with this lists 
+
+![[Pasted image 20250923114002.png]]
+
+
+## How to enumerate valid users with `kerbrute`?
+
+`Kerbrute` Tool has a parameter `userenum` to enumerate valid usernames, To enumerate valid usernames from the `userlist.txt` provided to us we run this  command:
+
+```bash
+kerbrute userenum --dc spookysec.local -d spookysec.local userlist.txt
+```
+
+Here we go , we got this output :  
+
+```bash 
+[👾]   )#  kerbrute userenum --dc 10.10.24.200 -d spookysec.local usrlst -t 100                                     [/root]
+
+    __             __               __
+   / /_____  _____/ /_  _______  __/ /____
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,< /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/
+
+Version: dev (n/a) - 09/23/25 - Ronnie Flathers @ropnop
+
+2025/09/23 09:13:00 >  Using KDC(s):
+2025/09/23 09:13:00 >   10.10.24.200:88
+
+2025/09/23 09:13:01 >  [+] VALID USERNAME:       james@spookysec.local
+2025/09/23 09:13:02 >  [+] VALID USERNAME:       svc-admin@spookysec.local
+2025/09/23 09:13:03 >  [+] VALID USERNAME:       James@spookysec.local
+2025/09/23 09:13:03 >  [+] VALID USERNAME:       robin@spookysec.local
+2025/09/23 09:13:07 >  [+] VALID USERNAME:       darkstar@spookysec.local
+2025/09/23 09:13:11 >  [+] VALID USERNAME:       administrator@spookysec.local
+2025/09/23 09:13:23 >  [+] VALID USERNAME:       backup@spookysec.local
+2025/09/23 09:13:27 >  [+] VALID USERNAME:       paradox@spookysec.local
+2025/09/23 09:13:44 >  [+] VALID USERNAME:       JAMES@spookysec.local
+2025/09/23 09:13:49 >  [+] VALID USERNAME:       Robin@spookysec.local
+2025/09/23 09:14:20 >  [+] VALID USERNAME:       Administrator@spookysec.local
+2025/09/23 09:15:34 >  [+] VALID USERNAME:       Darkstar@spookysec.local
+2025/09/23 09:15:58 >  [+] VALID USERNAME:       Paradox@spookysec.local
+2025/09/23 09:17:24 >  [+] VALID USERNAME:       DARKSTAR@spookysec.local
+2025/09/23 09:17:47 >  [+] VALID USERNAME:       ori@spookysec.local
+2025/09/23 09:18:31 >  [+] VALID USERNAME:       ROBIN@spookysec.local
+2025/09/23 09:20:12 >  Done! Tested 73317 usernames (16 valid) in 431.760 seconds
+```
+
+We notes this accounts : 
+- `svc-admin@spookysec.local`
+- `backup@spookysec.local`
+- `administrator@spookysec.local`
+
+
+# Abusing Kerberos
 
