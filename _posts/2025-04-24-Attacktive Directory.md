@@ -1,8 +1,10 @@
 ---
-title:  Walkthrough For Web Security Category In Cyber Talents
-date: 2025-04-24 07:40:00 +0200
-categories: [Web Security]
-tags: [Web-Security]
-img_path: ""  # leave blank
-image: "https://raw.githubusercontent.com/M9nx/m9nx.github.io/main/assets/img/pic5.jpeg"
+title: Attacktive Directory | THM
+date: 2025-09-23 07:40:00 +0200
+categories:
+  - THM 
+tags:
+  - THM
+img_path: ""
+image: https://tryhackme-images.s3.amazonaws.com/room-icons/f38b047a2a7089147766099dffeb8a5d.png
 ---

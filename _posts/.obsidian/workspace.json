@@ -80,7 +80,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Admin-has-the-power",
+                "query": "tag:THM",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,7 +101,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
