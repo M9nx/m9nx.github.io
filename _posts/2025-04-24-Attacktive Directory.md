@@ -609,6 +609,6 @@ TryHackMe{nahh hehe }
 This machine was a great reminder that every small clue can lead to a bigger breakthrough. By following a structured approach — reconnaissance, exploitation, and privilege escalation — we managed to complete it step by step. Hopefully this write-up helps others facing the same challenge.
 
 
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/9a4c16cd-fe8d-4701-be12-ab7e86c4c866" />
+[<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/9a4c16cd-fe8d-4701-be12-ab7e86c4c866" />](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGx1OHZqNHJ6em53NHczdHhrN2JoY3k4NGZ3NG10bDFqcjczanJ6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xYGnFm4mVcMxYIVq3v/giphy.gif)
 
 
