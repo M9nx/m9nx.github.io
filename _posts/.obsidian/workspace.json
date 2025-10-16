@@ -27,24 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-04-24-Attacktive Directory.md",
+                "file": "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-04-24-Attacktive Directory"
-            }
-          },
-          {
-            "id": "555820d73e5ab58c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "pic/v13w3r/3-v13w3r.png"
-              },
-              "icon": "lucide-image",
-              "title": "3-v13w3r"
+              "title": "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents"
             }
           }
         ],
@@ -198,10 +186,13 @@
   },
   "active": "a98d5e1307924eab",
   "lastOpenFiles": [
+    "2025-04-24-Attacktive Directory.md",
+    "2025-04-24-Web-Security-Cyber-Talents.md",
+    "pic/v13w3r/3-v13w3r.png",
+    "pic/v13w3r/2-v13w3r.png",
+    "pic/v13w3r/1-v13w3r.png",
     "Pasted image 20250923123327.png",
     "2025-04-21-Introduction-To-Cybersecurity-In-Cyber-Talents.md",
-    "2025-04-24-Web-Security-Cyber-Talents.md",
-    "2025-04-24-Attacktive Directory.md",
     "pic/THM/Attacktive Directory",
     "pic/THM",
     "pic/THM/Attacktive Directory/Pasted image 20250923114002.png",
@@ -218,10 +209,6 @@
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/arrow-left.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/arrow-dual-rotating-arrows.svg",
     "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/alert-question-mark-circle.svg",
-    "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/alert-x.svg",
-    "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/alert-no-entry.svg",
-    "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/action-x.svg",
-    "HUN/balances.squareup.com-index.2817c0cd/public/assets/svg/market-icons/alert-exclaimation-circle.svg",
     "CVE.md"
   ]
 }
