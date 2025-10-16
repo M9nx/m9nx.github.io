@@ -1,7 +1,7 @@
 ---
 title:  Walkthrough For Introduction To Cybersecurity Path In Cyber Talents
 date:  2025-03-28 07:40:00 +0200
-categories: [cybertalents]
+categories: [CyberTalents]
 tags: [Intro-To-Sec,cybertalents]
 img_path: ""  # leave blank
 image: "https://raw.githubusercontent.com/M9nx/m9nx.github.io/main/assets/img/pic2.jpeg"
