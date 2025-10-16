@@ -6,6 +6,9 @@ tags: [Intro-To-Sec,cybertalents]
 img_path: ""  # leave blank
 image: "https://raw.githubusercontent.com/M9nx/m9nx.github.io/main/assets/img/pic2.jpeg"
 ---
+السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، بِسْمِ اللَّهِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، الْحَمْدُ لِلَّهِ الَّذِي عَلَّمَ بِالْقَلَمِ، عَلَّمَ الإِنسَانَ مَا لَمْ يَعْلَمْ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى خَيْرِ مُعَلِّمٍ النَّاسَ الْخَيْرَ، مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، أَمَّا بَعْدُ
+
+
 
 ![](https://m9nx-11.gitbook.io/~gitbook/image?url=https%3A%2F%2F1666899571-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FGLiEQLEOptj89uzbA35s%252Fuploads%252FxpzY9ClWsf84MvG41Ulk%252FStarting%2520Episode%25204%2520GIF%2520by%2520PBS.gif%3Falt%3Dmedia%26token%3D2e341b03-e130-49bb-956f-80adb9427c08&width=768&dpr=4&quality=100&sign=7d9bce14&sv=2)
 
