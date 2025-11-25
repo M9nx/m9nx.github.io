@@ -1,6 +1,6 @@
 ---
 title:  Walkthrough For Web Security Category In Cyber Talents Part 4 
-date: 2025-11-25 07:40:00 +0200
+date: 2025-11-24 07:40:00 +0200
 categories: [Web Security,CyberTalents]
 tags: [Web Security] 
 img_path: ""  # leave blank
