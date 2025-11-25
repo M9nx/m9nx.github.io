@@ -1,0 +1,118 @@
+/* Custom CSS for Collapsible Sidebar and Background Image */
+
+/* Background Image for all pages */
+body {
+    background-image: url('/assets/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Add overlay to ensure text readability */
+#main-wrapper {
+    background-color: rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+/* Dark mode compatibility */
+[data-mode="dark"] #main-wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar collapsible functionality */
+#sidebar {
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Hidden sidebar state */
+#sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: var(--sidebar-bg);
+    border: 1px solid var(--sidebar-border-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--sidebar-muted-color);
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: var(--btn-paginator-hover-color);
+    color: var(--link-color);
+}
+
+/* Adjust main content when sidebar is collapsed */
+#main-wrapper {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+#sidebar.collapsed ~ #main-wrapper {
+    margin-left: 0;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 849px) {
+    .sidebar-toggle {
+        top: 10px;
+        left: 10px;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    
+    #sidebar {
+        transform: translateX(-100%);
+    }
+    
+    #sidebar.mobile-show {
+        transform: translateX(0);
+    }
+    
+    #main-wrapper {
+        margin-left: 0 !important;
+    }
+}
+
+/* Ensure background image works on all pages */
+.post-content, .page-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+[data-mode="dark"] .post-content,
+[data-mode="dark"] .page-content {
+    background-color: rgba(42, 42, 42, 0.95);
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.sidebar-overlay.show {
+    display: block;
+}
+
+/* Animation for smooth transitions */
+* {
+    transition: margin-left 0.3s ease-in-out;
+}
